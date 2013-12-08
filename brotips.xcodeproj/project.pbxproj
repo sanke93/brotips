@@ -18,6 +18,9 @@
 		FD5D0327185462D70029CC51 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD5D0326185462D70029CC51 /* Default-568h@2x.png */; };
 		FD5D032A185462D70029CC51 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5D0328185462D70029CC51 /* MainStoryboard.storyboard */; };
 		FD5D032D185462D70029CC51 /* SBCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D032C185462D70029CC51 /* SBCViewController.m */; };
+		FD5D0335185467B10029CC51 /* SBCBrotip.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D0334185467B10029CC51 /* SBCBrotip.m */; };
+		FD5D033C185471EC0029CC51 /* SBCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D033B185471EC0029CC51 /* SBCParser.m */; };
+		FDC767D81854AA9800E11ED2 /* brotip.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC767D71854AA9800E11ED2 /* brotip.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,11 @@
 		FD5D0329185462D70029CC51 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FD5D032B185462D70029CC51 /* SBCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBCViewController.h; sourceTree = "<group>"; };
 		FD5D032C185462D70029CC51 /* SBCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBCViewController.m; sourceTree = "<group>"; };
+		FD5D0333185467B10029CC51 /* SBCBrotip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCBrotip.h; sourceTree = "<group>"; };
+		FD5D0334185467B10029CC51 /* SBCBrotip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCBrotip.m; sourceTree = "<group>"; };
+		FD5D033A185471EC0029CC51 /* SBCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCParser.h; sourceTree = "<group>"; };
+		FD5D033B185471EC0029CC51 /* SBCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCParser.m; sourceTree = "<group>"; };
+		FDC767D71854AA9800E11ED2 /* brotip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brotip.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +94,13 @@
 				FD5D031F185462D70029CC51 /* SBCAppDelegate.h */,
 				FD5D0320185462D70029CC51 /* SBCAppDelegate.m */,
 				FD5D0328185462D70029CC51 /* MainStoryboard.storyboard */,
+				FD5D0333185467B10029CC51 /* SBCBrotip.h */,
+				FD5D0334185467B10029CC51 /* SBCBrotip.m */,
+				FD5D033A185471EC0029CC51 /* SBCParser.h */,
+				FD5D033B185471EC0029CC51 /* SBCParser.m */,
 				FD5D032B185462D70029CC51 /* SBCViewController.h */,
 				FD5D032C185462D70029CC51 /* SBCViewController.m */,
+				FDC767D71854AA9800E11ED2 /* brotip.png */,
 				FD5D0317185462D70029CC51 /* Supporting Files */,
 			);
 			path = brotips;
@@ -164,6 +177,7 @@
 				FD5D0325185462D70029CC51 /* Default@2x.png in Resources */,
 				FD5D0327185462D70029CC51 /* Default-568h@2x.png in Resources */,
 				FD5D032A185462D70029CC51 /* MainStoryboard.storyboard in Resources */,
+				FDC767D81854AA9800E11ED2 /* brotip.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +191,8 @@
 				FD5D031D185462D70029CC51 /* main.m in Sources */,
 				FD5D0321185462D70029CC51 /* SBCAppDelegate.m in Sources */,
 				FD5D032D185462D70029CC51 /* SBCViewController.m in Sources */,
+				FD5D0335185467B10029CC51 /* SBCBrotip.m in Sources */,
+				FD5D033C185471EC0029CC51 /* SBCParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +308,7 @@
 				FD5D0332185462D70029CC51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

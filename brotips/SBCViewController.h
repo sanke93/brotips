@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SBCViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *recentTableView;
+@property (nonatomic, retain) UIImageView *customImage;
 
 @end
