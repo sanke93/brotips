@@ -101,7 +101,7 @@ NSString *linkURL;
                                                                       message:alertText
                                                                      delegate:self
                                                             cancelButtonTitle:@"OK!"
-                                                         ter   otherButtonTitles:nil]
+                                                         otherButtonTitles:nil]
                                            show];
                                       }
                                   }];

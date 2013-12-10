@@ -104,7 +104,7 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     CGSize expectedLabelSize = [cellContent sizeWithFont:[UIFont systemFontOfSize:15]constrainedToSize:maximumLabelSize lineBreakMode:UILineBreakModeCharacterWrap];
    // NSLog(@"%@",cellContent);
     //NSLog(@"%f",expectedLabelSize.height + 30);
-	return MAX(95,expectedLabelSize.height + 30);
+	return MAX(75,expectedLabelSize.height + 30);
 }
 
 
@@ -264,7 +264,7 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     xmlParser = [[SBCParser alloc] loadXMLByURL:@"http://www.brotips.com/recent.atom"];
     brotipLogo = [UIImage imageNamed:@"brotip.png"];
      
-    self.title = @"Recent";
+    self.title = @" ";
     //self.navigationItem.backBarButtonItem.title = @" ";
 
     
