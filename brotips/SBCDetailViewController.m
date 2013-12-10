@@ -8,6 +8,7 @@
 
 #import "SBCDetailViewController.h"
 #import "SBCBrotip.h"
+#import "FacebookSDK/FacebookSDK.h"
 
 @interface SBCDetailViewController ()
 - (void)configureView;
@@ -17,6 +18,7 @@
 @implementation SBCDetailViewController
 
 NSURL *shareURL;
+NSString *linkURL;
 #pragma mark - Managing the detail item
 
 - (void)setDetailItem:(id)newDetailItem
@@ -36,8 +38,9 @@ NSURL *shareURL;
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [currentTip content];
         self.tipNumber.text = [currentTip tipNumber];
-        shareURL = [[NSURL alloc]initFileURLWithPath:currentTip.linkTag];
-        //NSLog(@"%@",shareURL);
+        linkURL = [currentTip linkTag];
+        //shareURL = [[NSURL alloc]initFileURLWithPath:currentTip.linkTag];
+        //NSLog(@"%@",currentTip.linkTag);
     }
 }
 
@@ -72,6 +75,41 @@ NSURL *shareURL;
         NSString *message = @"Texting isn't supported";
         UIAlertView *alertSMS = [[UIAlertView alloc] initWithTitle:@"Error" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alertSMS show];
+    }
+}
+
+- (IBAction)fbShare:(id)sender {
+    BOOL displayedNativeDialog = [FBNativeDialogs
+                                  presentShareDialogModallyFrom:self
+                                  initialText:self.detailDescriptionLabel.text
+                                  image:nil
+                                  url:[NSURL URLWithString:linkURL]
+                                  handler:^(FBNativeDialogResult result, NSError *error) {
+                                      
+                                      NSString *alertText = @"";
+                                      if ([[error userInfo][FBErrorDialogReasonKey] isEqualToString:FBErrorDialogNotSupported]) {
+                                          alertText = @"iOS Share Sheet not supported.";
+                                      } else if (error) {
+                                          alertText = [NSString stringWithFormat:@"error: domain = %@, code = %d", error.domain, error.code];
+                                      } else if (result == FBNativeDialogResultSucceeded) {
+                                          alertText = @"Posted successfully.";
+                                      }
+                                      
+                                      if (![alertText isEqualToString:@""]) {
+                                          // Show the result in an alert
+                                          [[[UIAlertView alloc] initWithTitle:@"Result"
+                                                                      message:alertText
+                                                                     delegate:self
+                                                            cancelButtonTitle:@"OK!"
+                                                         ter   otherButtonTitles:nil]
+                                           show];
+                                      }
+                                  }];
+    if (!displayedNativeDialog) {
+        /* 
+         Fallback to web-based Feed dialog:
+         https://developers.facebook.com/docs/howtos/feed-dialog-using-ios-sdk/
+         */
     }
 }
 

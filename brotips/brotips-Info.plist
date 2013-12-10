@@ -40,6 +40,19 @@
 			<false/>
 		</dict>
 	</dict>
+	<key>FacebookAppID</key>
+	<string>461728117264415</string>
+	<key>FacebookDisplayName</key>
+	<string>Brotips App</string>
+	<key>URL types</key>
+	<array>
+		<dict>
+			<key>URL Schemes</key>
+			<array>
+				<string>fb461728117264415</string>
+			</array>
+		</dict>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

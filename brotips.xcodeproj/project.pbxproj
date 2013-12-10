@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD32486518575E55001275C7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD32486418575E55001275C7 /* FacebookSDK.framework */; };
 		FDC767E91854B76900E11ED2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767E81854B76900E11ED2 /* UIKit.framework */; };
 		FDC767EB1854B76900E11ED2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767EA1854B76900E11ED2 /* Foundation.framework */; };
 		FDC767ED1854B76900E11ED2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767EC1854B76900E11ED2 /* CoreGraphics.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD32486418575E55001275C7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		FDC767E41854B76900E11ED2 /* brotips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brotips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC767E81854B76900E11ED2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FDC767EA1854B76900E11ED2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -75,8 +77,8 @@
 		FDC9F2531857232500F6E8BA /* 8-red-menu-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-red-menu-bar@2x.png"; sourceTree = "<group>"; };
 		FDC9F2541857232500F6E8BA /* 8-red-settings-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-red-settings-button.png"; sourceTree = "<group>"; };
 		FDC9F2551857232500F6E8BA /* 8-red-settings-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-red-settings-button@2x.png"; sourceTree = "<group>"; };
-		FDE961BA18573B50009AB511 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		FDE961BB18573B50009AB511 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		FDE961BA18573B50009AB511 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../SWRevealViewController.h; sourceTree = "<group>"; };
+		FDE961BB18573B50009AB511 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../SWRevealViewController.m; sourceTree = "<group>"; };
 		FDE961BD18573D11009AB511 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		FDE961BE18573D11009AB511 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		FDE961C41857448F009AB511 /* SBCPopularViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBCPopularViewController.h; path = ../SBCPopularViewController.h; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				FDC767E91854B76900E11ED2 /* UIKit.framework in Frameworks */,
 				FDC767EB1854B76900E11ED2 /* Foundation.framework in Frameworks */,
 				FDC767ED1854B76900E11ED2 /* CoreGraphics.framework in Frameworks */,
+				FD32486518575E55001275C7 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,9 +107,6 @@
 		FDC767D91854B76900E11ED2 = {
 			isa = PBXGroup;
 			children = (
-				FDE961CF1857553E009AB511 /* MessageUI.framework */,
-				FDE961BA18573B50009AB511 /* SWRevealViewController.h */,
-				FDE961BB18573B50009AB511 /* SWRevealViewController.m */,
 				FDC767EE1854B76900E11ED2 /* brotips */,
 				FDC767E71854B76900E11ED2 /* Frameworks */,
 				FDC767E51854B76900E11ED2 /* Products */,
@@ -124,6 +124,8 @@
 		FDC767E71854B76900E11ED2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD32486418575E55001275C7 /* FacebookSDK.framework */,
+				FDE961CF1857553E009AB511 /* MessageUI.framework */,
 				FDC767E81854B76900E11ED2 /* UIKit.framework */,
 				FDC767EA1854B76900E11ED2 /* Foundation.framework */,
 				FDC767EC1854B76900E11ED2 /* CoreGraphics.framework */,
@@ -134,6 +136,8 @@
 		FDC767EE1854B76900E11ED2 /* brotips */ = {
 			isa = PBXGroup;
 			children = (
+				FDE961BA18573B50009AB511 /* SWRevealViewController.h */,
+				FDE961BB18573B50009AB511 /* SWRevealViewController.m */,
 				FDE961C41857448F009AB511 /* SBCPopularViewController.h */,
 				FDE961C51857448F009AB511 /* SBCPopularViewController.m */,
 				FDC9F23C185705DC00F6E8BA /* SBCCell.h */,
@@ -356,6 +360,10 @@
 		FDC7680C1854B76900E11ED2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "brotips/brotips-Prefix.pch";
 				INFOPLIST_FILE = "brotips/brotips-Info.plist";
@@ -367,6 +375,10 @@
 		FDC7680D1854B76900E11ED2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "brotips/brotips-Prefix.pch";
 				INFOPLIST_FILE = "brotips/brotips-Info.plist";
