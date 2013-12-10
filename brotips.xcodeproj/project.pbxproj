@@ -223,6 +223,11 @@
 				CLASSPREFIX = SBC;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Sanket Chauhan";
+				TargetAttributes = {
+					FDC767E31854B76900E11ED2 = {
+						DevelopmentTeam = 76M7GG3426;
+					};
+				};
 			};
 			buildConfigurationList = FDC767DE1854B76900E11ED2 /* Build configuration list for PBXProject "brotips" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -360,6 +365,8 @@
 		FDC7680C1854B76900E11ED2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -368,6 +375,7 @@
 				GCC_PREFIX_HEADER = "brotips/brotips-Prefix.pch";
 				INFOPLIST_FILE = "brotips/brotips-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -375,6 +383,8 @@
 		FDC7680D1854B76900E11ED2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -383,6 +393,7 @@
 				GCC_PREFIX_HEADER = "brotips/brotips-Prefix.pch";
 				INFOPLIST_FILE = "brotips/brotips-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

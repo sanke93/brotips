@@ -38,14 +38,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" image="brotip.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ow-kV-d8A">
-                                            <rect key="frame" x="13" y="3" width="57" height="17"/>
+                                            <rect key="frame" x="10" y="3" width="57" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="57" id="Ejv-tf-J1p"/>
                                                 <constraint firstAttribute="height" constant="17" id="Mtc-OW-nQg"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" text="3333" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZe-Li-5lJ">
-                                            <rect key="frame" x="72" y="2" width="60" height="19"/>
+                                            <rect key="frame" x="69" y="2" width="60" height="19"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="eM6-j4-cpe"/>
                                             </constraints>
@@ -54,7 +54,7 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="scaleToFill" text="sdasdasdsa asdasd asfdfdsf dfsdf dsfsdf" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="none" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="269" translatesAutoresizingMaskIntoConstraints="NO" id="vpc-gU-ReL">
-                                            <rect key="frame" x="13" y="28" width="269" height="35"/>
+                                            <rect key="frame" x="9" y="28" width="269" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="269" id="Xvf-hP-teR"/>
                                             </constraints>
@@ -68,11 +68,11 @@
                                 <color key="backgroundColor" red="0.55643960678891125" green="0.71320906929347827" blue="0.61351093758069786" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="mZe-Li-5lJ" firstAttribute="top" secondItem="gb3-us-Dq2" secondAttribute="top" constant="2" id="1PG-pg-anl"/>
+                                    <constraint firstItem="8ow-kV-d8A" firstAttribute="leading" secondItem="gb3-us-Dq2" secondAttribute="leading" constant="10" id="8bs-M8-Qvz"/>
                                     <constraint firstItem="mZe-Li-5lJ" firstAttribute="centerY" secondItem="8ow-kV-d8A" secondAttribute="centerY" type="default" id="CVv-yC-1P2"/>
+                                    <constraint firstItem="vpc-gU-ReL" firstAttribute="leading" secondItem="gb3-us-Dq2" secondAttribute="leading" constant="9" id="Efr-oz-tQA"/>
                                     <constraint firstItem="vpc-gU-ReL" firstAttribute="top" secondItem="8ow-kV-d8A" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Gqz-ug-p6g"/>
-                                    <constraint firstItem="vpc-gU-ReL" firstAttribute="leading" secondItem="8ow-kV-d8A" secondAttribute="leading" type="default" id="IrQ-mR-9WP"/>
-                                    <constraint firstItem="mZe-Li-5lJ" firstAttribute="leading" secondItem="gb3-us-Dq2" secondAttribute="leading" constant="72" id="Qer-HS-9Vb"/>
-                                    <constraint firstItem="vpc-gU-ReL" firstAttribute="leading" secondItem="gb3-us-Dq2" secondAttribute="leading" constant="13" id="b0j-L0-3Ba"/>
+                                    <constraint firstItem="mZe-Li-5lJ" firstAttribute="leading" secondItem="gb3-us-Dq2" secondAttribute="leading" constant="69" id="UFU-CA-ggt"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="tipContent" destination="vpc-gU-ReL" id="Zpa-Cr-OkP"/>

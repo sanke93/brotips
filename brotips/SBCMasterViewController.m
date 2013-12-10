@@ -87,8 +87,8 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
 
 - (UIImage *)cellBackgroundForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger rowCount = [self tableView:[self tableView] numberOfRowsInSection:0];
-    NSInteger rowIndex = indexPath.row;
+    //NSInteger rowCount = [self tableView:[self tableView] numberOfRowsInSection:0];
+    //NSInteger rowIndex = indexPath.row;
     UIImage *background = nil;
     
     background = [UIImage imageNamed:@""];
@@ -116,7 +116,7 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     //SBCCell* customCells = [[SBCCell alloc] init];
     static NSString *CellIdentifier = @"customCell";
     SBCBrotip *currentTip = [[xmlParser entries] objectAtIndex:indexPath.row];
-    NSString* cellContent1 = [currentTip content];
+    //NSString* cellContent1 = [currentTip content];
     SBCCell* customCells = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
    // if (customCells == nil){
@@ -264,8 +264,8 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     xmlParser = [[SBCParser alloc] loadXMLByURL:@"http://www.brotips.com/recent.atom"];
     brotipLogo = [UIImage imageNamed:@"brotip.png"];
      
-    self.title = @" ";
-    //self.navigationItem.backBarButtonItem.title = @" ";
+    self.title = @"Recent";
+    self.navigationItem.backBarButtonItem.title = @" ";
 
     
     UIImage *menuButtonImage = [UIImage imageNamed:@"menu.png"];
