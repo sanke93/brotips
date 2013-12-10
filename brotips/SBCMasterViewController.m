@@ -16,6 +16,8 @@
     NSMutableArray *_objects;
 }
 
+
+
 @end
 
 @implementation SBCMasterViewController
@@ -24,8 +26,11 @@ SBCParser *xmlParser;
 UIImage	 *brotipLogo;
 CGRect dateFrame;
 UILabel *dateLabel;
+NSString *cellContent;
+
 CGRect contentFrame;
 UILabel *contentLabel;
+
 
 - (void)awakeFromNib
 {
@@ -58,21 +63,74 @@ UILabel *contentLabel;
     return [[xmlParser entries] count];
 }
 
+#pragma mark UITableViewDelegate
+- (void)tableView: (UITableView*)tableView
+  willDisplayCell: (UITableViewCell*)cell
+forRowAtIndexPath: (NSIndexPath*)indexPath
+{
+    //cell.backgroundColor = indexPath.row % 2
+    //? [UIColor colorWithRed: 0.0 green: 0.0 blue: 0.8 alpha: 0.3]
+    //: [UIColor whiteColor];
+    //cell.textLabel.backgroundColor = [UIColor clearColor];
+    //cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+    if (indexPath.row % 3 ==0)
+        cell.backgroundColor = [UIColor colorWithRed:0.0 green:0.8 blue:0.0 alpha:0.3];
+    
+    else if(indexPath.row % 2)
+        cell.backgroundColor = [UIColor colorWithRed:0.8 green:0.0 blue:0.0 alpha:0.3];
+    else
+        cell.backgroundColor = [UIColor whiteColor];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SBCBrotip *currentTip = [[xmlParser entries] objectAtIndex:indexPath.row];
+    cellContent = [currentTip content];
+    CGSize maximumLabelSize = CGSizeMake(236,9999);
+    CGSize expectedLabelSize = [cellContent sizeWithFont:[UIFont systemFontOfSize:15]constrainedToSize:maximumLabelSize lineBreakMode:UILineBreakModeCharacterWrap];
+    NSLog(@"%@",cellContent);
+    NSLog(@"%f",expectedLabelSize.height + 30);
+	return MAX(95,expectedLabelSize.height + 30);
+}
+
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //SBCCell* customCells = [[SBCCell alloc] init];
     static NSString *CellIdentifier = @"customCell";
-    SBCCell* customCells = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     SBCBrotip *currentTip = [[xmlParser entries] objectAtIndex:indexPath.row];
+    NSString* cellContent1 = [currentTip content];
+    SBCCell* customCells = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
    // if (customCells == nil){
         //customCells = [[SBCCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
         //UIImageView *tipImageView = (UIImageView *)[cell viewWithTag:100];
         //tipImageView.image = [UIImage imageNamed:@"brotip.png"];
         //self.tipLogo = [UIImage imageNamed:@"brotip.png"];
+        //customCells.tipContent.
         customCells.tipNum1.text = [currentTip tipNumber];
-    customCells.tipContent.text = [currentTip content];
-    customCells.tipImage.image = [UIImage imageNamed:@"brotip.png"];
+        customCells.tipContent.text = [currentTip content];
+    CGSize maximumLabelSize = CGSizeMake(236,9999);
+        customCells.tipImage.image = [UIImage imageNamed:@"brotip.png"];
+    CGSize expectedLabelSize = [customCells.tipContent.text sizeWithFont:[UIFont systemFontOfSize:15]
+                          constrainedToSize:maximumLabelSize lineBreakMode:UILineBreakModeCharacterWrap];
+    CGRect contentFrame = CGRectMake(7, 20, 265, expectedLabelSize.height);
+    UILabel *contentLabel = [[UILabel alloc] initWithFrame:contentFrame];
+    contentLabel.numberOfLines = 5;
+    contentLabel.font = [UIFont boldSystemFontOfSize:14];
+    contentLabel.backgroundColor = [UIColor clearColor];
+    //UILabel *contentLabel = (UILabel *)[cell.contentView viewWithTag:0011];
+    contentLabel.text = [currentTip content];
+    //[customCells.contentView addSubview:contentLabel];
+    
+    //NSLog(@"%f",expectedLabelSize.height);
+    
+    //customCells.backgroundColor = indexPath.row % 2 ? [UIColor colorWithRed: 0.0 green: 0.0 blue: 1.0 alpha: 1.0]: [UIColor whiteColor];
+    //customCells.backgroundColor = [UIColor redColor];
+    
+    //[customCells setBackgroundColor:[UIColor colorWithRed:.8 green:.8 blue:1 alpha:1]];
     
       //UILabel *tipNumber = (UILabel *)[cell viewWithTag:101];
         //tipNumber.text = [currentTip tipNumber];
@@ -142,10 +200,7 @@ UILabel *contentLabel;
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	return 90;
-}
+
 
 #pragma mark -
 #pragma mark Table view delegate
