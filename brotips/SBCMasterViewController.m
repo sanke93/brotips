@@ -110,6 +110,8 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // FYI: On IOS7 just use textContainerInset.top
+    
     //SBCCell* customCells = [[SBCCell alloc] init];
     static NSString *CellIdentifier = @"customCell";
     SBCBrotip *currentTip = [[xmlParser entries] objectAtIndex:indexPath.row];
@@ -134,6 +136,7 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     contentLabel.numberOfLines = 5;
     contentLabel.font = [UIFont boldSystemFontOfSize:14];
     contentLabel.backgroundColor = [UIColor clearColor];
+    
     //UILabel *contentLabel = (UILabel *)[cell.contentView viewWithTag:0011];
     contentLabel.text = [currentTip content];
     //[customCells.contentView addSubview:contentLabel];

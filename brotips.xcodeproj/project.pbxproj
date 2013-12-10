@@ -69,6 +69,8 @@
 		FDC9F2531857232500F6E8BA /* 8-red-menu-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-red-menu-bar@2x.png"; sourceTree = "<group>"; };
 		FDC9F2541857232500F6E8BA /* 8-red-settings-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-red-settings-button.png"; sourceTree = "<group>"; };
 		FDC9F2551857232500F6E8BA /* 8-red-settings-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-red-settings-button@2x.png"; sourceTree = "<group>"; };
+		FDC9F2AE185732A400F6E8BA /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		FDC9F2AF185732A400F6E8BA /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				FDC768041854B76900E11ED2 /* SBCMasterViewController.m */,
 				FDC768061854B76900E11ED2 /* SBCDetailViewController.h */,
 				FDC768071854B76900E11ED2 /* SBCDetailViewController.m */,
+				FDC9F2AD1857329200F6E8BA /* Library */,
 				FDC9F23B1857052500F6E8BA /* Resources */,
 				FDC767EF1854B76900E11ED2 /* Supporting Files */,
 			);
@@ -163,6 +166,15 @@
 				FDC7680F1854B79400E11ED2 /* brotip.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		FDC9F2AD1857329200F6E8BA /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				FDC9F2AE185732A400F6E8BA /* SWRevealViewController.h */,
+				FDC9F2AF185732A400F6E8BA /* SWRevealViewController.m */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
