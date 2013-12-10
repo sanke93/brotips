@@ -1,5 +1,5 @@
 //
-//  SBCViewController.h
+//  SBCMasterViewController.h
 //  brotips
 //
 //  Created by Sanket Chauhan on 12/8/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SBCViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITableView *recentTableView;
+@interface SBCMasterViewController : UITableViewController
 @property (nonatomic, retain) UIImageView *customImage;
-
 @end

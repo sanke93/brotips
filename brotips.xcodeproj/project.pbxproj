@@ -7,115 +7,128 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD5D0311185462D70029CC51 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5D0310185462D70029CC51 /* UIKit.framework */; };
-		FD5D0313185462D70029CC51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5D0312185462D70029CC51 /* Foundation.framework */; };
-		FD5D0315185462D70029CC51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5D0314185462D70029CC51 /* CoreGraphics.framework */; };
-		FD5D031B185462D70029CC51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD5D0319185462D70029CC51 /* InfoPlist.strings */; };
-		FD5D031D185462D70029CC51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D031C185462D70029CC51 /* main.m */; };
-		FD5D0321185462D70029CC51 /* SBCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D0320185462D70029CC51 /* SBCAppDelegate.m */; };
-		FD5D0323185462D70029CC51 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FD5D0322185462D70029CC51 /* Default.png */; };
-		FD5D0325185462D70029CC51 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD5D0324185462D70029CC51 /* Default@2x.png */; };
-		FD5D0327185462D70029CC51 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD5D0326185462D70029CC51 /* Default-568h@2x.png */; };
-		FD5D032A185462D70029CC51 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5D0328185462D70029CC51 /* MainStoryboard.storyboard */; };
-		FD5D032D185462D70029CC51 /* SBCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D032C185462D70029CC51 /* SBCViewController.m */; };
-		FD5D0335185467B10029CC51 /* SBCBrotip.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D0334185467B10029CC51 /* SBCBrotip.m */; };
-		FD5D033C185471EC0029CC51 /* SBCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D033B185471EC0029CC51 /* SBCParser.m */; };
-		FDC767D81854AA9800E11ED2 /* brotip.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC767D71854AA9800E11ED2 /* brotip.png */; };
+		563231D8185671B8007B7257 /* SBCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 563231D7185671B8007B7257 /* SBCCell.m */; };
+		FDC767E91854B76900E11ED2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767E81854B76900E11ED2 /* UIKit.framework */; };
+		FDC767EB1854B76900E11ED2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767EA1854B76900E11ED2 /* Foundation.framework */; };
+		FDC767ED1854B76900E11ED2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767EC1854B76900E11ED2 /* CoreGraphics.framework */; };
+		FDC767F31854B76900E11ED2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDC767F11854B76900E11ED2 /* InfoPlist.strings */; };
+		FDC767F51854B76900E11ED2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC767F41854B76900E11ED2 /* main.m */; };
+		FDC767F91854B76900E11ED2 /* SBCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC767F81854B76900E11ED2 /* SBCAppDelegate.m */; };
+		FDC767FB1854B76900E11ED2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC767FA1854B76900E11ED2 /* Default.png */; };
+		FDC767FD1854B76900E11ED2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC767FC1854B76900E11ED2 /* Default@2x.png */; };
+		FDC767FF1854B76900E11ED2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC767FE1854B76900E11ED2 /* Default-568h@2x.png */; };
+		FDC768021854B76900E11ED2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC768001854B76900E11ED2 /* MainStoryboard.storyboard */; };
+		FDC768051854B76900E11ED2 /* SBCMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC768041854B76900E11ED2 /* SBCMasterViewController.m */; };
+		FDC768081854B76900E11ED2 /* SBCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC768071854B76900E11ED2 /* SBCDetailViewController.m */; };
+		FDC768151854B79400E11ED2 /* brotip_2xh.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7680E1854B79400E11ED2 /* brotip_2xh.png */; };
+		FDC768161854B79400E11ED2 /* brotip.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7680F1854B79400E11ED2 /* brotip.png */; };
+		FDC768181854B79400E11ED2 /* SBCBrotip.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC768121854B79400E11ED2 /* SBCBrotip.m */; };
+		FDC768191854B79400E11ED2 /* SBCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC768141854B79400E11ED2 /* SBCParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FD5D030C185462D70029CC51 /* brotips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brotips.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD5D0310185462D70029CC51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		FD5D0312185462D70029CC51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		FD5D0314185462D70029CC51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FD5D0318185462D70029CC51 /* brotips-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "brotips-Info.plist"; sourceTree = "<group>"; };
-		FD5D031A185462D70029CC51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FD5D031C185462D70029CC51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FD5D031E185462D70029CC51 /* brotips-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "brotips-Prefix.pch"; sourceTree = "<group>"; };
-		FD5D031F185462D70029CC51 /* SBCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBCAppDelegate.h; sourceTree = "<group>"; };
-		FD5D0320185462D70029CC51 /* SBCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBCAppDelegate.m; sourceTree = "<group>"; };
-		FD5D0322185462D70029CC51 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		FD5D0324185462D70029CC51 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		FD5D0326185462D70029CC51 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		FD5D0329185462D70029CC51 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FD5D032B185462D70029CC51 /* SBCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBCViewController.h; sourceTree = "<group>"; };
-		FD5D032C185462D70029CC51 /* SBCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBCViewController.m; sourceTree = "<group>"; };
-		FD5D0333185467B10029CC51 /* SBCBrotip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCBrotip.h; sourceTree = "<group>"; };
-		FD5D0334185467B10029CC51 /* SBCBrotip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCBrotip.m; sourceTree = "<group>"; };
-		FD5D033A185471EC0029CC51 /* SBCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCParser.h; sourceTree = "<group>"; };
-		FD5D033B185471EC0029CC51 /* SBCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCParser.m; sourceTree = "<group>"; };
-		FDC767D71854AA9800E11ED2 /* brotip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brotip.png; sourceTree = "<group>"; };
+		563231D6185671B8007B7257 /* SBCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCCell.h; sourceTree = "<group>"; };
+		563231D7185671B8007B7257 /* SBCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCCell.m; sourceTree = "<group>"; };
+		FDC767E41854B76900E11ED2 /* brotips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brotips.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDC767E81854B76900E11ED2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FDC767EA1854B76900E11ED2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FDC767EC1854B76900E11ED2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FDC767F01854B76900E11ED2 /* brotips-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "brotips-Info.plist"; sourceTree = "<group>"; };
+		FDC767F21854B76900E11ED2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FDC767F41854B76900E11ED2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FDC767F61854B76900E11ED2 /* brotips-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "brotips-Prefix.pch"; sourceTree = "<group>"; };
+		FDC767F71854B76900E11ED2 /* SBCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBCAppDelegate.h; sourceTree = "<group>"; };
+		FDC767F81854B76900E11ED2 /* SBCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBCAppDelegate.m; sourceTree = "<group>"; };
+		FDC767FA1854B76900E11ED2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FDC767FC1854B76900E11ED2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		FDC767FE1854B76900E11ED2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FDC768011854B76900E11ED2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FDC768031854B76900E11ED2 /* SBCMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBCMasterViewController.h; sourceTree = "<group>"; };
+		FDC768041854B76900E11ED2 /* SBCMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBCMasterViewController.m; sourceTree = "<group>"; };
+		FDC768061854B76900E11ED2 /* SBCDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBCDetailViewController.h; sourceTree = "<group>"; };
+		FDC768071854B76900E11ED2 /* SBCDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBCDetailViewController.m; sourceTree = "<group>"; };
+		FDC7680E1854B79400E11ED2 /* brotip_2xh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brotip_2xh.png; sourceTree = "<group>"; };
+		FDC7680F1854B79400E11ED2 /* brotip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brotip.png; sourceTree = "<group>"; };
+		FDC768111854B79400E11ED2 /* SBCBrotip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCBrotip.h; sourceTree = "<group>"; };
+		FDC768121854B79400E11ED2 /* SBCBrotip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCBrotip.m; sourceTree = "<group>"; };
+		FDC768131854B79400E11ED2 /* SBCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCParser.h; sourceTree = "<group>"; };
+		FDC768141854B79400E11ED2 /* SBCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FD5D0309185462D70029CC51 /* Frameworks */ = {
+		FDC767E11854B76900E11ED2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD5D0311185462D70029CC51 /* UIKit.framework in Frameworks */,
-				FD5D0313185462D70029CC51 /* Foundation.framework in Frameworks */,
-				FD5D0315185462D70029CC51 /* CoreGraphics.framework in Frameworks */,
+				FDC767E91854B76900E11ED2 /* UIKit.framework in Frameworks */,
+				FDC767EB1854B76900E11ED2 /* Foundation.framework in Frameworks */,
+				FDC767ED1854B76900E11ED2 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FD5D0301185462D70029CC51 = {
+		FDC767D91854B76900E11ED2 = {
 			isa = PBXGroup;
 			children = (
-				FD5D0316185462D70029CC51 /* brotips */,
-				FD5D030F185462D70029CC51 /* Frameworks */,
-				FD5D030D185462D70029CC51 /* Products */,
+				563231D6185671B8007B7257 /* SBCCell.h */,
+				563231D7185671B8007B7257 /* SBCCell.m */,
+				FDC767EE1854B76900E11ED2 /* brotips */,
+				FDC767E71854B76900E11ED2 /* Frameworks */,
+				FDC767E51854B76900E11ED2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FD5D030D185462D70029CC51 /* Products */ = {
+		FDC767E51854B76900E11ED2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FD5D030C185462D70029CC51 /* brotips.app */,
+				FDC767E41854B76900E11ED2 /* brotips.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FD5D030F185462D70029CC51 /* Frameworks */ = {
+		FDC767E71854B76900E11ED2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FD5D0310185462D70029CC51 /* UIKit.framework */,
-				FD5D0312185462D70029CC51 /* Foundation.framework */,
-				FD5D0314185462D70029CC51 /* CoreGraphics.framework */,
+				FDC767E81854B76900E11ED2 /* UIKit.framework */,
+				FDC767EA1854B76900E11ED2 /* Foundation.framework */,
+				FDC767EC1854B76900E11ED2 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FD5D0316185462D70029CC51 /* brotips */ = {
+		FDC767EE1854B76900E11ED2 /* brotips */ = {
 			isa = PBXGroup;
 			children = (
-				FD5D031F185462D70029CC51 /* SBCAppDelegate.h */,
-				FD5D0320185462D70029CC51 /* SBCAppDelegate.m */,
-				FD5D0328185462D70029CC51 /* MainStoryboard.storyboard */,
-				FD5D0333185467B10029CC51 /* SBCBrotip.h */,
-				FD5D0334185467B10029CC51 /* SBCBrotip.m */,
-				FD5D033A185471EC0029CC51 /* SBCParser.h */,
-				FD5D033B185471EC0029CC51 /* SBCParser.m */,
-				FD5D032B185462D70029CC51 /* SBCViewController.h */,
-				FD5D032C185462D70029CC51 /* SBCViewController.m */,
-				FDC767D71854AA9800E11ED2 /* brotip.png */,
-				FD5D0317185462D70029CC51 /* Supporting Files */,
+				FDC7680E1854B79400E11ED2 /* brotip_2xh.png */,
+				FDC7680F1854B79400E11ED2 /* brotip.png */,
+				FDC768111854B79400E11ED2 /* SBCBrotip.h */,
+				FDC768121854B79400E11ED2 /* SBCBrotip.m */,
+				FDC768131854B79400E11ED2 /* SBCParser.h */,
+				FDC768141854B79400E11ED2 /* SBCParser.m */,
+				FDC767F71854B76900E11ED2 /* SBCAppDelegate.h */,
+				FDC767F81854B76900E11ED2 /* SBCAppDelegate.m */,
+				FDC768001854B76900E11ED2 /* MainStoryboard.storyboard */,
+				FDC768031854B76900E11ED2 /* SBCMasterViewController.h */,
+				FDC768041854B76900E11ED2 /* SBCMasterViewController.m */,
+				FDC768061854B76900E11ED2 /* SBCDetailViewController.h */,
+				FDC768071854B76900E11ED2 /* SBCDetailViewController.m */,
+				FDC767EF1854B76900E11ED2 /* Supporting Files */,
 			);
 			path = brotips;
 			sourceTree = "<group>";
 		};
-		FD5D0317185462D70029CC51 /* Supporting Files */ = {
+		FDC767EF1854B76900E11ED2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FD5D0318185462D70029CC51 /* brotips-Info.plist */,
-				FD5D0319185462D70029CC51 /* InfoPlist.strings */,
-				FD5D031C185462D70029CC51 /* main.m */,
-				FD5D031E185462D70029CC51 /* brotips-Prefix.pch */,
-				FD5D0322185462D70029CC51 /* Default.png */,
-				FD5D0324185462D70029CC51 /* Default@2x.png */,
-				FD5D0326185462D70029CC51 /* Default-568h@2x.png */,
+				FDC767F01854B76900E11ED2 /* brotips-Info.plist */,
+				FDC767F11854B76900E11ED2 /* InfoPlist.strings */,
+				FDC767F41854B76900E11ED2 /* main.m */,
+				FDC767F61854B76900E11ED2 /* brotips-Prefix.pch */,
+				FDC767FA1854B76900E11ED2 /* Default.png */,
+				FDC767FC1854B76900E11ED2 /* Default@2x.png */,
+				FDC767FE1854B76900E11ED2 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -123,13 +136,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FD5D030B185462D70029CC51 /* brotips */ = {
+		FDC767E31854B76900E11ED2 /* brotips */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD5D0330185462D70029CC51 /* Build configuration list for PBXNativeTarget "brotips" */;
+			buildConfigurationList = FDC7680B1854B76900E11ED2 /* Build configuration list for PBXNativeTarget "brotips" */;
 			buildPhases = (
-				FD5D0308185462D70029CC51 /* Sources */,
-				FD5D0309185462D70029CC51 /* Frameworks */,
-				FD5D030A185462D70029CC51 /* Resources */,
+				FDC767E01854B76900E11ED2 /* Sources */,
+				FDC767E11854B76900E11ED2 /* Frameworks */,
+				FDC767E21854B76900E11ED2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -137,80 +150,83 @@
 			);
 			name = brotips;
 			productName = brotips;
-			productReference = FD5D030C185462D70029CC51 /* brotips.app */;
+			productReference = FDC767E41854B76900E11ED2 /* brotips.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FD5D0303185462D70029CC51 /* Project object */ = {
+		FDC767DB1854B76900E11ED2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SBC;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Sanket Chauhan";
 			};
-			buildConfigurationList = FD5D0306185462D70029CC51 /* Build configuration list for PBXProject "brotips" */;
+			buildConfigurationList = FDC767DE1854B76900E11ED2 /* Build configuration list for PBXProject "brotips" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = FD5D0301185462D70029CC51;
-			productRefGroup = FD5D030D185462D70029CC51 /* Products */;
+			mainGroup = FDC767D91854B76900E11ED2;
+			productRefGroup = FDC767E51854B76900E11ED2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FD5D030B185462D70029CC51 /* brotips */,
+				FDC767E31854B76900E11ED2 /* brotips */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FD5D030A185462D70029CC51 /* Resources */ = {
+		FDC767E21854B76900E11ED2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD5D031B185462D70029CC51 /* InfoPlist.strings in Resources */,
-				FD5D0323185462D70029CC51 /* Default.png in Resources */,
-				FD5D0325185462D70029CC51 /* Default@2x.png in Resources */,
-				FD5D0327185462D70029CC51 /* Default-568h@2x.png in Resources */,
-				FD5D032A185462D70029CC51 /* MainStoryboard.storyboard in Resources */,
-				FDC767D81854AA9800E11ED2 /* brotip.png in Resources */,
+				FDC767F31854B76900E11ED2 /* InfoPlist.strings in Resources */,
+				FDC767FB1854B76900E11ED2 /* Default.png in Resources */,
+				FDC767FD1854B76900E11ED2 /* Default@2x.png in Resources */,
+				FDC767FF1854B76900E11ED2 /* Default-568h@2x.png in Resources */,
+				FDC768021854B76900E11ED2 /* MainStoryboard.storyboard in Resources */,
+				FDC768151854B79400E11ED2 /* brotip_2xh.png in Resources */,
+				FDC768161854B79400E11ED2 /* brotip.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FD5D0308185462D70029CC51 /* Sources */ = {
+		FDC767E01854B76900E11ED2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD5D031D185462D70029CC51 /* main.m in Sources */,
-				FD5D0321185462D70029CC51 /* SBCAppDelegate.m in Sources */,
-				FD5D032D185462D70029CC51 /* SBCViewController.m in Sources */,
-				FD5D0335185467B10029CC51 /* SBCBrotip.m in Sources */,
-				FD5D033C185471EC0029CC51 /* SBCParser.m in Sources */,
+				FDC767F51854B76900E11ED2 /* main.m in Sources */,
+				FDC767F91854B76900E11ED2 /* SBCAppDelegate.m in Sources */,
+				FDC768051854B76900E11ED2 /* SBCMasterViewController.m in Sources */,
+				FDC768081854B76900E11ED2 /* SBCDetailViewController.m in Sources */,
+				563231D8185671B8007B7257 /* SBCCell.m in Sources */,
+				FDC768181854B79400E11ED2 /* SBCBrotip.m in Sources */,
+				FDC768191854B79400E11ED2 /* SBCParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FD5D0319185462D70029CC51 /* InfoPlist.strings */ = {
+		FDC767F11854B76900E11ED2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FD5D031A185462D70029CC51 /* en */,
+				FDC767F21854B76900E11ED2 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		FD5D0328185462D70029CC51 /* MainStoryboard.storyboard */ = {
+		FDC768001854B76900E11ED2 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FD5D0329185462D70029CC51 /* en */,
+				FDC768011854B76900E11ED2 /* en */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -218,7 +234,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FD5D032E185462D70029CC51 /* Debug */ = {
+		FDC768091854B76900E11ED2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -245,7 +261,7 @@
 			};
 			name = Debug;
 		};
-		FD5D032F185462D70029CC51 /* Release */ = {
+		FDC7680A1854B76900E11ED2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -267,7 +283,7 @@
 			};
 			name = Release;
 		};
-		FD5D0331185462D70029CC51 /* Debug */ = {
+		FDC7680C1854B76900E11ED2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -278,7 +294,7 @@
 			};
 			name = Debug;
 		};
-		FD5D0332185462D70029CC51 /* Release */ = {
+		FDC7680D1854B76900E11ED2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -292,25 +308,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FD5D0306185462D70029CC51 /* Build configuration list for PBXProject "brotips" */ = {
+		FDC767DE1854B76900E11ED2 /* Build configuration list for PBXProject "brotips" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FD5D032E185462D70029CC51 /* Debug */,
-				FD5D032F185462D70029CC51 /* Release */,
+				FDC768091854B76900E11ED2 /* Debug */,
+				FDC7680A1854B76900E11ED2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD5D0330185462D70029CC51 /* Build configuration list for PBXNativeTarget "brotips" */ = {
+		FDC7680B1854B76900E11ED2 /* Build configuration list for PBXNativeTarget "brotips" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FD5D0331185462D70029CC51 /* Debug */,
-				FD5D0332185462D70029CC51 /* Release */,
+				FDC7680C1854B76900E11ED2 /* Debug */,
+				FDC7680D1854B76900E11ED2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FD5D0303185462D70029CC51 /* Project object */;
+	rootObject = FDC767DB1854B76900E11ED2 /* Project object */;
 }
