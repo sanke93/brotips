@@ -80,6 +80,19 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
         cell.backgroundColor = [UIColor colorWithRed:0.8 green:0.0 blue:0.0 alpha:0.3];
     else
         cell.backgroundColor = [UIColor whiteColor];
+    
+    
+}
+
+- (UIImage *)cellBackgroundForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger rowCount = [self tableView:[self tableView] numberOfRowsInSection:0];
+    NSInteger rowIndex = indexPath.row;
+    UIImage *background = nil;
+    
+    background = [UIImage imageNamed:@""];
+    
+    return background;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

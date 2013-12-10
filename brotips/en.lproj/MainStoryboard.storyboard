@@ -25,16 +25,16 @@
         <scene sceneID="18">
             <objects>
                 <tableViewController title="Master" id="12" customClass="SBCMasterViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="125" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="customCell" rowHeight="120" id="gb3-us-Dq2" customClass="SBCCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="120"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="customCell" rowHeight="125" id="gb3-us-Dq2" customClass="SBCCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="119"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="124"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" image="brotip.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ow-kV-d8A">
@@ -54,8 +54,8 @@
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" text="sdasdasdsa asdasd asfdfdsf dfsdf dsfsdf" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="none" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="293" translatesAutoresizingMaskIntoConstraints="NO" id="vpc-gU-ReL">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="52" id="0ah-17-lH6"/>
                                                 <constraint firstAttribute="width" constant="293" id="Guq-0d-avs"/>
+                                                <constraint firstAttribute="height" constant="101" id="l88-Lt-yPy"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,9 +67,9 @@
                                 <color key="backgroundColor" red="0.55643960678891125" green="0.71320906929347827" blue="0.61351093758069786" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="vpc-gU-ReL" secondAttribute="trailing" constant="20" type="default" id="8AJ-FW-eRB"/>
+                                    <constraint firstItem="vpc-gU-ReL" firstAttribute="top" secondItem="gb3-us-Dq2" secondAttribute="top" constant="17" id="EJQ-QZ-M2E"/>
                                     <constraint firstItem="mZe-Li-5lJ" firstAttribute="leading" secondItem="gb3-us-Dq2" secondAttribute="leading" constant="66" id="Kdk-eO-kcL"/>
                                     <constraint firstItem="vpc-gU-ReL" firstAttribute="leading" secondItem="8ow-kV-d8A" secondAttribute="leading" type="default" id="Rv3-9R-ZJ4"/>
-                                    <constraint firstItem="vpc-gU-ReL" firstAttribute="top" secondItem="gb3-us-Dq2" secondAttribute="top" constant="18" id="TQv-GN-muq"/>
                                     <constraint firstItem="mZe-Li-5lJ" firstAttribute="centerY" secondItem="8ow-kV-d8A" secondAttribute="centerY" type="default" id="dev-gA-pCJ"/>
                                     <constraint firstItem="mZe-Li-5lJ" firstAttribute="top" secondItem="gb3-us-Dq2" secondAttribute="top" constant="2" id="eFp-yz-gXU"/>
                                 </constraints>
