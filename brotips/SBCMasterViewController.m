@@ -11,6 +11,7 @@
 #import "SBCDetailViewController.h"
 #import "SBCParser.h"
 #import "SBCCell.h"
+#import "SWRevealViewController.h"
 
 @interface SBCMasterViewController () {
     NSMutableArray *_objects;
@@ -263,7 +264,32 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     brotipLogo = [UIImage imageNamed:@"brotip.png"];
      
     self.title = @"Recent";
-    self.navigationItem.backBarButtonItem.title = @" ";
+    //self.navigationItem.backBarButtonItem.title = @" ";
+
+    
+    UIImage *menuButtonImage = [UIImage imageNamed:@"menu.png"];
+    UIButton *menuButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    menuButton.frame = CGRectMake(8.0f, 0.0f, menuButtonImage.size.width, menuButtonImage.size.height);
+    [menuButton setImage:menuButtonImage forState:UIControlStateNormal];
+    [menuButton addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIView *settingsView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, menuButton.frame.size.width + 5.0f, menuButton.frame.size.height)];
+    settingsView.backgroundColor = [UIColor clearColor];
+    [settingsView addSubview:menuButton];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:settingsView];
+    //self.navigationItem.leftBarButtonItem.target = self.revealViewController;
+   // self.navigationItem.leftBarButtonItem.action = @selector(revealToggle:);
+    
+//    _sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.1f];
+//    
+//    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+//    _sidebarButton.target = self.revealViewController;
+//    _sidebarButton.action = @selector(revealToggle:);
+    // Set the gesture
+    
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+
     //[self.navigationController.navigationBar setBackgroundColor:[UIColor brownColor]];
     //[self.navigationController.navigationBar setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"navbar_bg.png"]]];
 //    self.navigationItem.leftBarButtonItem = self.editButtonItem;

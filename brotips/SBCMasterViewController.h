@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SBCMasterViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (nonatomic, retain) UIImageView *customImage;
 @end
