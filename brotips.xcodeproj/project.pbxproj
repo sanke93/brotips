@@ -24,6 +24,14 @@
 		FDC768181854B79400E11ED2 /* SBCBrotip.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC768121854B79400E11ED2 /* SBCBrotip.m */; };
 		FDC768191854B79400E11ED2 /* SBCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC768141854B79400E11ED2 /* SBCParser.m */; };
 		FDC9F23E185705DC00F6E8BA /* SBCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC9F23D185705DC00F6E8BA /* SBCCell.m */; };
+		FDC9F24D18571DDA00F6E8BA /* navbar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC9F24B18571DDA00F6E8BA /* navbar_bg.png */; };
+		FDC9F24E18571DDA00F6E8BA /* navbar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC9F24C18571DDA00F6E8BA /* navbar_bg@2x.png */; };
+		FDC9F2561857232500F6E8BA /* 8-red-back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC9F2501857232500F6E8BA /* 8-red-back-button.png */; };
+		FDC9F2571857232500F6E8BA /* 8-red-back-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC9F2511857232500F6E8BA /* 8-red-back-button@2x.png */; };
+		FDC9F2581857232500F6E8BA /* 8-red-menu-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC9F2521857232500F6E8BA /* 8-red-menu-bar.png */; };
+		FDC9F2591857232500F6E8BA /* 8-red-menu-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC9F2531857232500F6E8BA /* 8-red-menu-bar@2x.png */; };
+		FDC9F25A1857232500F6E8BA /* 8-red-settings-button.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC9F2541857232500F6E8BA /* 8-red-settings-button.png */; };
+		FDC9F25B1857232500F6E8BA /* 8-red-settings-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC9F2551857232500F6E8BA /* 8-red-settings-button@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +61,14 @@
 		FDC768141854B79400E11ED2 /* SBCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCParser.m; sourceTree = "<group>"; };
 		FDC9F23C185705DC00F6E8BA /* SBCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCCell.h; sourceTree = "<group>"; };
 		FDC9F23D185705DC00F6E8BA /* SBCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCCell.m; sourceTree = "<group>"; };
+		FDC9F24B18571DDA00F6E8BA /* navbar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_bg.png; sourceTree = "<group>"; };
+		FDC9F24C18571DDA00F6E8BA /* navbar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_bg@2x.png"; sourceTree = "<group>"; };
+		FDC9F2501857232500F6E8BA /* 8-red-back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-red-back-button.png"; sourceTree = "<group>"; };
+		FDC9F2511857232500F6E8BA /* 8-red-back-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-red-back-button@2x.png"; sourceTree = "<group>"; };
+		FDC9F2521857232500F6E8BA /* 8-red-menu-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-red-menu-bar.png"; sourceTree = "<group>"; };
+		FDC9F2531857232500F6E8BA /* 8-red-menu-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-red-menu-bar@2x.png"; sourceTree = "<group>"; };
+		FDC9F2541857232500F6E8BA /* 8-red-settings-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-red-settings-button.png"; sourceTree = "<group>"; };
+		FDC9F2551857232500F6E8BA /* 8-red-settings-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-red-settings-button@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +149,14 @@
 		FDC9F23B1857052500F6E8BA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FDC9F2501857232500F6E8BA /* 8-red-back-button.png */,
+				FDC9F2511857232500F6E8BA /* 8-red-back-button@2x.png */,
+				FDC9F2521857232500F6E8BA /* 8-red-menu-bar.png */,
+				FDC9F2531857232500F6E8BA /* 8-red-menu-bar@2x.png */,
+				FDC9F2541857232500F6E8BA /* 8-red-settings-button.png */,
+				FDC9F2551857232500F6E8BA /* 8-red-settings-button@2x.png */,
+				FDC9F24B18571DDA00F6E8BA /* navbar_bg.png */,
+				FDC9F24C18571DDA00F6E8BA /* navbar_bg@2x.png */,
 				FDC767F71854B76900E11ED2 /* SBCAppDelegate.h */,
 				FDC767F81854B76900E11ED2 /* SBCAppDelegate.m */,
 				FDC7680E1854B79400E11ED2 /* brotip_2xh.png */,
@@ -200,6 +224,14 @@
 				FDC768021854B76900E11ED2 /* MainStoryboard.storyboard in Resources */,
 				FDC768151854B79400E11ED2 /* brotip_2xh.png in Resources */,
 				FDC768161854B79400E11ED2 /* brotip.png in Resources */,
+				FDC9F24D18571DDA00F6E8BA /* navbar_bg.png in Resources */,
+				FDC9F24E18571DDA00F6E8BA /* navbar_bg@2x.png in Resources */,
+				FDC9F2561857232500F6E8BA /* 8-red-back-button.png in Resources */,
+				FDC9F2571857232500F6E8BA /* 8-red-back-button@2x.png in Resources */,
+				FDC9F2581857232500F6E8BA /* 8-red-menu-bar.png in Resources */,
+				FDC9F2591857232500F6E8BA /* 8-red-menu-bar@2x.png in Resources */,
+				FDC9F25A1857232500F6E8BA /* 8-red-settings-button.png in Resources */,
+				FDC9F25B1857232500F6E8BA /* 8-red-settings-button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

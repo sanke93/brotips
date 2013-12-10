@@ -12,6 +12,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIImage *menuBarImage = [UIImage imageNamed:@"8-red-menu-bar.png"];
+    UIImage *backButtonImage = [UIImage imageNamed:@"8-red-back-button.png"];
+    UIImage *navBackgroundImage = [UIImage imageNamed:@"navbar_bg"];
+    [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
+
+    [[UINavigationBar appearance] setBackgroundImage:menuBarImage forBarMetrics:UIBarMetricsDefault];
+    
+     backButtonImage = [backButtonImage
+                       resizableImageWithCapInsets:UIEdgeInsetsMake(0.0f, 9.0f, 0.0f, 5.0f)];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage
+                                                      forState:UIControlStateNormal
+                                                    barMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor whiteColor], UITextAttributeTextColor,
+      [UIFont boldSystemFontOfSize:10.0f], UITextAttributeFont,
+      nil] forState:UIControlStateNormal];
+  
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                          [UIColor whiteColor], UITextAttributeTextColor,
+                                                          [UIFont boldSystemFontOfSize:23.0f], UITextAttributeFont, [UIColor blackColor], UITextAttributeTextShadowColor,  [NSValue valueWithCGSize:CGSizeMake(0.0,1.0)], UITextAttributeTextShadowOffset,
+                                                          nil]];
     // Override point for customization after application launch.
     return YES;
 }

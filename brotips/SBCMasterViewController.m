@@ -258,8 +258,11 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     
     xmlParser = [[SBCParser alloc] loadXMLByURL:@"http://www.brotips.com/recent.atom"];
     brotipLogo = [UIImage imageNamed:@"brotip.png"];
-    
+     
     self.title = @"Recent";
+    self.navigationItem.backBarButtonItem.title = @" ";
+    //[self.navigationController.navigationBar setBackgroundColor:[UIColor brownColor]];
+    //[self.navigationController.navigationBar setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"navbar_bg.png"]]];
 //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 //    
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
