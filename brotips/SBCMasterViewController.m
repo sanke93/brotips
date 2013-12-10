@@ -102,8 +102,8 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     cellContent = [currentTip content];
     CGSize maximumLabelSize = CGSizeMake(236,9999);
     CGSize expectedLabelSize = [cellContent sizeWithFont:[UIFont systemFontOfSize:15]constrainedToSize:maximumLabelSize lineBreakMode:UILineBreakModeCharacterWrap];
-    NSLog(@"%@",cellContent);
-    NSLog(@"%f",expectedLabelSize.height + 30);
+   // NSLog(@"%@",cellContent);
+    //NSLog(@"%f",expectedLabelSize.height + 30);
 	return MAX(95,expectedLabelSize.height + 30);
 }
 
@@ -248,8 +248,9 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        SBCBrotip *currentTip = [[xmlParser entries] objectAtIndex:indexPath.row];
         //NSDate *object = _objects[indexPath.row];
-        //[[segue destinationViewController] setDetailItem:object];
+        [[segue destinationViewController] setDetailItem:currentTip];
     }
 }
 

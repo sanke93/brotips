@@ -13,6 +13,7 @@
 @property (strong, nonatomic)NSString *entry;
 @property  (strong,nonatomic)NSString *content;
 @property (strong,nonatomic)NSString *tipNumber;
-@property (strong,nonatomic)NSString *linkTag;
+@property (strong,nonatomic)NSMutableString *linkTag;
 @property (strong,nonatomic)NSURL *link;
+
 @end

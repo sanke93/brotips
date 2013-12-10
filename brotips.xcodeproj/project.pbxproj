@@ -37,6 +37,7 @@
 		FDE961C018573D11009AB511 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDE961BE18573D11009AB511 /* menu@2x.png */; };
 		FDE961C61857448F009AB511 /* SBCPopularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE961C51857448F009AB511 /* SBCPopularViewController.m */; };
 		FDE961C91857463B009AB511 /* SBCMenuBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE961C81857463A009AB511 /* SBCMenuBarViewController.m */; };
+		FDE961D01857553F009AB511 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE961CF1857553E009AB511 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		FDE961C51857448F009AB511 /* SBCPopularViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBCPopularViewController.m; path = ../SBCPopularViewController.m; sourceTree = "<group>"; };
 		FDE961C71857463A009AB511 /* SBCMenuBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCMenuBarViewController.h; sourceTree = "<group>"; };
 		FDE961C81857463A009AB511 /* SBCMenuBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCMenuBarViewController.m; sourceTree = "<group>"; };
+		FDE961CF1857553E009AB511 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE961D01857553F009AB511 /* MessageUI.framework in Frameworks */,
 				FDC767E91854B76900E11ED2 /* UIKit.framework in Frameworks */,
 				FDC767EB1854B76900E11ED2 /* Foundation.framework in Frameworks */,
 				FDC767ED1854B76900E11ED2 /* CoreGraphics.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		FDC767D91854B76900E11ED2 = {
 			isa = PBXGroup;
 			children = (
+				FDE961CF1857553E009AB511 /* MessageUI.framework */,
 				FDE961BA18573B50009AB511 /* SWRevealViewController.h */,
 				FDE961BB18573B50009AB511 /* SWRevealViewController.m */,
 				FDC767EE1854B76900E11ED2 /* brotips */,

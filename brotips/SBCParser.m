@@ -48,16 +48,21 @@ SBCBrotip		*currentTip;
 - (void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementname namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
 
-    if ([elementname isEqualToString:@"link"])
-    {
-        currentTip.linkTag = currentNodeContent;
-    }
+//    if ([elementname isEqualToString:@"link"])
+//    {
+//        currentTip.linkTag = currentNodeContent;
+//        NSLog(@"%@", currentNodeContent);
+//    }
     
     if ([elementname isEqualToString:@"title"])
     {
         NSString *tempTip = currentNodeContent;
         tempTip= [tempTip stringByReplacingOccurrencesOfString:@"#" withString:@""];
         currentTip.tipNumber = tempTip;
+        currentTip.linkTag = [[NSMutableString alloc] initWithString:@"http://www.brotips.com/"];
+        [currentTip.linkTag appendString:[NSString stringWithFormat:@"%@", tempTip]];
+        //shareURL = [[NSURL alloc]initFileURLWithPath:tipURL];
+        //NSLog(@"%@",currentTip.linkTag);
     }
     
     if ([elementname isEqualToString:@"content"]){

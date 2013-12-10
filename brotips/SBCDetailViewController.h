@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface SBCDetailViewController : UIViewController
+@interface SBCDetailViewController : UIViewController <MFMessageComposeViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+- (IBAction)sendText:(id)sender;
+
+
 @end
