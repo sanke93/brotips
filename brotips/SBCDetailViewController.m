@@ -9,6 +9,9 @@
 #import "SBCDetailViewController.h"
 #import "SBCBrotip.h"
 #import "FacebookSDK/FacebookSDK.h"
+#import "Social/SLComposeViewController.h"
+#import "Social/SLServiceTypes.h"
+#import <Social/Social.h>
 
 @interface SBCDetailViewController ()
 - (void)configureView;
@@ -78,7 +81,21 @@ NSString *linkURL;
     }
 }
 
+- (NSDictionary*)parseURLParams:(NSString *)query {
+    NSArray *pairs = [query componentsSeparatedByString:@"&"];
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    for (NSString *pair in pairs) {
+        NSArray *kv = [pair componentsSeparatedByString:@"="];
+        NSString *val =
+        [kv[1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        params[kv[0]] = val;
+    }
+    return params;
+}
+
 - (IBAction)fbShare:(id)sender {
+    
+
     BOOL displayedNativeDialog = [FBNativeDialogs
                                   presentShareDialogModallyFrom:self
                                   initialText:self.detailDescriptionLabel.text
@@ -106,11 +123,82 @@ NSString *linkURL;
                                       }
                                   }];
     if (!displayedNativeDialog) {
-        /* 
+        /*
          Fallback to web-based Feed dialog:
          https://developers.facebook.com/docs/howtos/feed-dialog-using-ios-sdk/
          */
+        
+        NSMutableDictionary *params =
+        [NSMutableDictionary dictionaryWithObjectsAndKeys:
+         @"Brotips App", @"name",
+         @"Brotip", @"caption",
+         self.detailDescriptionLabel.text, @"description",
+         linkURL, @"link",
+         
+         nil];
+        
+        // Invoke the dialog
+        [FBWebDialogs presentFeedDialogModallyWithSession:nil
+                                               parameters:params
+                                                  handler:
+         ^(FBWebDialogResult result, NSURL *resultURL, NSError *error) {
+             if (error) {
+                 // Error launching the dialog or publishing a story.
+                 NSLog(@"Error publishing story.");
+             } else {
+                 if (result == FBWebDialogResultDialogNotCompleted) {
+                     // User clicked the "x" icon
+                     NSLog(@"User canceled story publishing.");
+                 } else {
+                     // Handle the publish feed callback
+                     NSDictionary *urlParams = [self parseURLParams:[resultURL query]];
+                     if (![urlParams valueForKey:@"post_id"]) {
+                         // User clicked the Cancel button
+                         NSLog(@"User canceled story publishing.");
+                     } else {
+                         // User clicked the Share button
+                         NSString *msg = [NSString stringWithFormat:
+                                          @"Posted story, id: %@",
+                                          [urlParams valueForKey:@"post_id"]];
+                         NSLog(@"%@", msg);
+                         // Show the result in an alert
+                         [[[UIAlertView alloc] initWithTitle:@"Result"
+                                                     message:msg
+                                                    delegate:nil
+                                           cancelButtonTitle:@"OK!"
+                                           otherButtonTitles:nil]
+                          show];
+                     }
+                 }
+             }
+         }];
     }
+}
+
+- (IBAction)tweetShare:(id)sender {
+
+    
+    NSMutableString *initialText = [[NSMutableString alloc] initWithString:self.detailDescriptionLabel.text];
+    
+    [initialText appendString:[NSString stringWithFormat:@" #brotip"]];
+     
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [tweetSheet setInitialText:initialText];
+        [self presentViewController:tweetSheet animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Sorry"
+                                  message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup"
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+    
 }
 
 -(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result{

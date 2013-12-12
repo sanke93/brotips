@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 - (IBAction)sendText:(id)sender;
 - (IBAction)fbShare:(id)sender;
+- (IBAction)tweetShare:(id)sender;
 
 
 @end

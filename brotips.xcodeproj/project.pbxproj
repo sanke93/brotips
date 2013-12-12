@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		FD32486518575E55001275C7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD32486418575E55001275C7 /* FacebookSDK.framework */; };
+		FD6DF70F18593E1E00139644 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6DF70E18593E1E00139644 /* Social.framework */; };
+		FD6DF7111859449200139644 /* Messages.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DF7101859449200139644 /* Messages.png */; };
+		FD6DF713185946A800139644 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DF712185946A800139644 /* twitter.png */; };
+		FD6DF715185946AE00139644 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DF714185946AE00139644 /* facebook.png */; };
+		FD6DF7171859472900139644 /* messagesios7.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DF7161859472900139644 /* messagesios7.png */; };
 		FDC767E91854B76900E11ED2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767E81854B76900E11ED2 /* UIKit.framework */; };
 		FDC767EB1854B76900E11ED2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767EA1854B76900E11ED2 /* Foundation.framework */; };
 		FDC767ED1854B76900E11ED2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767EC1854B76900E11ED2 /* CoreGraphics.framework */; };
@@ -43,6 +48,11 @@
 
 /* Begin PBXFileReference section */
 		FD32486418575E55001275C7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		FD6DF70E18593E1E00139644 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FD6DF7101859449200139644 /* Messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Messages.png; sourceTree = "<group>"; };
+		FD6DF712185946A800139644 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		FD6DF714185946AE00139644 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		FD6DF7161859472900139644 /* messagesios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messagesios7.png; sourceTree = "<group>"; };
 		FDC767E41854B76900E11ED2 /* brotips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brotips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC767E81854B76900E11ED2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FDC767EA1854B76900E11ED2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD6DF70F18593E1E00139644 /* Social.framework in Frameworks */,
 				FDE961D01857553F009AB511 /* MessageUI.framework in Frameworks */,
 				FDC767E91854B76900E11ED2 /* UIKit.framework in Frameworks */,
 				FDC767EB1854B76900E11ED2 /* Foundation.framework in Frameworks */,
@@ -124,6 +135,7 @@
 		FDC767E71854B76900E11ED2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD6DF70E18593E1E00139644 /* Social.framework */,
 				FD32486418575E55001275C7 /* FacebookSDK.framework */,
 				FDE961CF1857553E009AB511 /* MessageUI.framework */,
 				FDC767E81854B76900E11ED2 /* UIKit.framework */,
@@ -176,6 +188,10 @@
 		FDC9F23B1857052500F6E8BA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FD6DF7161859472900139644 /* messagesios7.png */,
+				FD6DF714185946AE00139644 /* facebook.png */,
+				FD6DF712185946A800139644 /* twitter.png */,
+				FD6DF7101859449200139644 /* Messages.png */,
 				FDE961BD18573D11009AB511 /* menu.png */,
 				FDE961BE18573D11009AB511 /* menu@2x.png */,
 				FDC9F2501857232500F6E8BA /* 8-red-back-button.png */,
@@ -268,6 +284,10 @@
 				FDC9F25B1857232500F6E8BA /* 8-red-settings-button@2x.png in Resources */,
 				FDE961BF18573D11009AB511 /* menu.png in Resources */,
 				FDE961C018573D11009AB511 /* menu@2x.png in Resources */,
+				FD6DF7111859449200139644 /* Messages.png in Resources */,
+				FD6DF713185946A800139644 /* twitter.png in Resources */,
+				FD6DF715185946AE00139644 /* facebook.png in Resources */,
+				FD6DF7171859472900139644 /* messagesios7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
