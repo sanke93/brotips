@@ -11,7 +11,7 @@
 @interface SBCBrotip : NSObject
 
 @property (strong, nonatomic)NSString *entry;
-@property  (strong,nonatomic)NSString *content;
+@property  (strong,nonatomic)NSMutableString *content;
 @property (strong,nonatomic)NSString *tipNumber;
 @property (strong,nonatomic)NSMutableString *linkTag;
 @property (strong,nonatomic)NSURL *link;

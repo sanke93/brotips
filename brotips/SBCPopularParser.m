@@ -11,7 +11,7 @@
 
 @implementation SBCPopularParser
 
-NSMutableString	*currentNodeContent;
+//NSMutableString	*currentNodeContent;
 NSXMLParser		*parser;
 SBCBrotip		*currentTip;
 
@@ -30,7 +30,13 @@ SBCBrotip		*currentTip;
 
 - (void) parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
-	currentNodeContent = (NSMutableString *) [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    currentNodeContent = (NSMutableString *) [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+//
+//    if (currentNodeContent == nil)
+//        currentNodeContent = [[NSMutableString alloc] initWithCapacity: 300];
+//    
+//    [currentNodeContent appendString: [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
+    
 }
 
 - (void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementname namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
@@ -58,7 +64,7 @@ SBCBrotip		*currentTip;
     }
     
     if ([elementname isEqualToString:@"content"]){
-        currentTip.content = currentNodeContent;
+        currentTip.content = [[NSMutableString alloc] initWithString:currentNodeContent];
         NSLog(@"%@",currentTip.content);
     }
     
