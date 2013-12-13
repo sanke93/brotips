@@ -75,7 +75,7 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     //cell.textLabel.backgroundColor = [UIColor clearColor];
     //cell.detailTextLabel.backgroundColor = [UIColor clearColor];
     if (indexPath.row % 2)
-        cell.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.5 alpha:0.2];
+        cell.backgroundColor = [UIColor colorWithRed:0.0 green:0.4 blue:0.5 alpha:0.2];
     
     else
         cell.backgroundColor = [UIColor colorWithRed:0.8 green:0.0 blue:0.0 alpha:0.2];

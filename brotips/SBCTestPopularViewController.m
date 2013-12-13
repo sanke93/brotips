@@ -11,7 +11,7 @@
 #import "SBCPopularParser.h"
 #import "SBCCell.h"
 #import "SBCBrotip.h"
-
+#import "SBCDetailViewController.h"
 @interface SBCTestPopularViewController ()
 
 @end
@@ -97,13 +97,14 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     //: [UIColor whiteColor];
     //cell.textLabel.backgroundColor = [UIColor clearColor];
     //cell.detailTextLabel.backgroundColor = [UIColor clearColor];
-    if (indexPath.row % 3 ==0)
-        cell.backgroundColor = [UIColor colorWithRed:0.0 green:0.8 blue:0.0 alpha:0.3];
+   
     
-    else if(indexPath.row % 2)
-        cell.backgroundColor = [UIColor colorWithRed:0.8 green:0.0 blue:0.0 alpha:0.3];
+    if (indexPath.row % 2)
+        cell.backgroundColor = [UIColor colorWithRed:0.0 green:0.4 blue:0.5 alpha:0.2];
+    
     else
-        cell.backgroundColor = [UIColor whiteColor];
+        cell.backgroundColor = [UIColor colorWithRed:0.8 green:0.0 blue:0.0 alpha:0.2];
+    
     
     
 }
@@ -117,6 +118,16 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     background = [UIImage imageNamed:@""];
     
     return background;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showDetail1"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        SBCBrotip *currentTip = [[xmlParser popularEntries] objectAtIndex:indexPath.row];
+        //NSDate *object = _objects[indexPath.row];
+        [[segue destinationViewController] setDetailItem:currentTip];
+    }
 }
 
 #pragma mark - Table view data source
@@ -147,11 +158,30 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"customCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-   
-    // Configure the cell...
-    
-    return cell;
+    SBCBrotip *currentTip = [[xmlParser popularEntries] objectAtIndex:indexPath.row];
+    //NSString* cellContent1 = [currentTip content];
+    SBCCell* customCells = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    customCells.tipNum1.text = [currentTip tipNumber];
+    customCells.tipContent.text = [currentTip content];
+    CGSize maximumLabelSize = CGSizeMake(236,9999);
+    customCells.tipImage.image = [UIImage imageNamed:@"brotip.png"];
+//    CGSize expectedLabelSize = [customCells.tipContent.text sizeWithFont:[UIFont systemFontOfSize:15]
+//                                                       constrainedToSize:maximumLabelSize lineBreakMode:UILineBreakModeCharacterWrap];
+//    CGRect contentFrame = CGRectMake(7, 20, 265, expectedLabelSize.height);
+//    UILabel *contentLabel = [[UILabel alloc] initWithFrame:contentFrame];
+//    contentLabel.numberOfLines = 5;
+//    contentLabel.font = [UIFont boldSystemFontOfSize:14];
+//    contentLabel.backgroundColor = [UIColor clearColor];
+//    
+//    //UILabel *contentLabel = (UILabel *)[cell.contentView viewWithTag:0011];
+//    contentLabel.text = [currentTip content];
+
+    return customCells;
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+//   
+//    // Configure the cell...
+//    
+//    return cell;
 }
 
 /*

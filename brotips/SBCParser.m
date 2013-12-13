@@ -67,6 +67,7 @@ SBCBrotip		*currentTip;
     
     if ([elementname isEqualToString:@"content"]){
         currentTip.content = currentNodeContent;
+        
     }
 
 	if ([elementname isEqualToString:@"entry"])
