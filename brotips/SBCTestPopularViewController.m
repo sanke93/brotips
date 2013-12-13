@@ -8,11 +8,24 @@
 
 #import "SBCTestPopularViewController.h"
 #import "SWRevealViewController.h"
+#import "SBCPopularParser.h"
+#import "SBCCell.h"
+#import "SBCBrotip.h"
+
 @interface SBCTestPopularViewController ()
 
 @end
 
 @implementation SBCTestPopularViewController
+
+SBCPopularParser *xmlParser;
+UIImage	 *brotipLogo;
+CGRect dateFrame;
+UILabel *dateLabel;
+NSString *cellContent;
+
+CGRect contentFrame;
+UILabel *contentLabel;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,11 +45,16 @@
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem.title = @"Back";
+    xmlParser = [[SBCPopularParser alloc] loadXMLByURL:@"http://www.brotips.com/popular.atom"];
+    brotipLogo = [UIImage imageNamed:@"brotip.png"];
+    
+   // self.navigationItem.leftBarButtonItem.title = @"Back";
    
     //    _sidebarButton.target = self.revealViewController;
     //    _sidebarButton.action = @selector(revealToggle:);
@@ -62,27 +80,75 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload
+{
+    [self setTableView:nil];
+    [super viewDidUnload];
+}
+
+
+#pragma mark UITableViewDelegate
+- (void)tableView: (UITableView*)tableView
+  willDisplayCell: (UITableViewCell*)cell
+forRowAtIndexPath: (NSIndexPath*)indexPath
+{
+    //cell.backgroundColor = indexPath.row % 2
+    //? [UIColor colorWithRed: 0.0 green: 0.0 blue: 0.8 alpha: 0.3]
+    //: [UIColor whiteColor];
+    //cell.textLabel.backgroundColor = [UIColor clearColor];
+    //cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+    if (indexPath.row % 3 ==0)
+        cell.backgroundColor = [UIColor colorWithRed:0.0 green:0.8 blue:0.0 alpha:0.3];
+    
+    else if(indexPath.row % 2)
+        cell.backgroundColor = [UIColor colorWithRed:0.8 green:0.0 blue:0.0 alpha:0.3];
+    else
+        cell.backgroundColor = [UIColor whiteColor];
+    
+    
+}
+
+- (UIImage *)cellBackgroundForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //NSInteger rowCount = [self tableView:[self tableView] numberOfRowsInSection:0];
+    //NSInteger rowIndex = indexPath.row;
+    UIImage *background = nil;
+    
+    background = [UIImage imageNamed:@""];
+    
+    return background;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 3;
+    return [[xmlParser popularEntries] count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SBCBrotip *currentTip = [[xmlParser popularEntries] objectAtIndex:indexPath.row];
+    cellContent = [currentTip content];
+    CGSize maximumLabelSize = CGSizeMake(236,9999);
+    CGSize expectedLabelSize = [cellContent sizeWithFont:[UIFont systemFontOfSize:15]constrainedToSize:maximumLabelSize lineBreakMode:UILineBreakModeCharacterWrap];
+    // NSLog(@"%@",cellContent);
+    //NSLog(@"%f",expectedLabelSize.height + 30);
+	return MAX(75,expectedLabelSize.height + 30);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"customCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text = @"jh";
+   
     // Configure the cell...
     
     return cell;

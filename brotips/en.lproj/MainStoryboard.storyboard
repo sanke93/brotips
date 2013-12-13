@@ -411,14 +411,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" id="ZyE-0l-2qw">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="customCell" rowHeight="193" id="5qI-G6-qsx" customClass="SBCCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="192"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" image="brotip.png" translatesAutoresizingMaskIntoConstraints="NO" id="FzC-6Q-Mzg">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="3GW-p7-m9n"/>
+                                                <constraint firstAttribute="width" constant="57" id="Nwt-VH-uoB"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" text="3333" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIt-Fy-Lpl">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="xcY-xB-iyA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                            <color key="textColor" red="0.54689622959999995" green="0.54689622959999995" blue="0.54689622959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="scaleToFill" text="sdasdasdsa asdasd asfdfdsf dfsdf dsfsdf" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="none" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="269" translatesAutoresizingMaskIntoConstraints="NO" id="HpR-ZR-XtT">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="269" id="9u4-WB-TlK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" red="0.55643960680000004" green="0.71320906930000005" blue="0.61351093759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="FzC-6Q-Mzg" firstAttribute="leading" secondItem="5qI-G6-qsx" secondAttribute="leading" constant="10" id="4Va-yH-Igm"/>
+                                    <constraint firstItem="HpR-ZR-XtT" firstAttribute="leading" secondItem="5qI-G6-qsx" secondAttribute="leading" constant="9" id="6BZ-R7-ZNy"/>
+                                    <constraint firstItem="tIt-Fy-Lpl" firstAttribute="top" secondItem="5qI-G6-qsx" secondAttribute="top" constant="2" id="BdY-zO-cfS"/>
+                                    <constraint firstItem="tIt-Fy-Lpl" firstAttribute="leading" secondItem="5qI-G6-qsx" secondAttribute="leading" constant="69" id="In8-IU-OJo"/>
+                                    <constraint firstItem="HpR-ZR-XtT" firstAttribute="top" secondItem="FzC-6Q-Mzg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MOl-ks-hWP"/>
+                                    <constraint firstItem="tIt-Fy-Lpl" firstAttribute="centerY" secondItem="FzC-6Q-Mzg" secondAttribute="centerY" type="default" id="Qrn-KK-YxG"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="tipContent" destination="HpR-ZR-XtT" id="ttg-zl-kAw"/>
+                                    <outlet property="tipImage" destination="FzC-6Q-Mzg" id="pFY-mx-P8h"/>
+                                    <outlet property="tipNum1" destination="tIt-Fy-Lpl" id="Kbp-0B-mWX"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

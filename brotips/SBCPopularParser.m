@@ -60,7 +60,7 @@ SBCBrotip		*currentTip;
         currentTip.linkTag = [[NSMutableString alloc] initWithString:@"http://www.brotips.com/"];
         [currentTip.linkTag appendString:[NSString stringWithFormat:@"%@", tempTip]];
         //shareURL = [[NSURL alloc]initFileURLWithPath:tipURL];
-        //NSLog(@"%@",currentTip.linkTag);
+        NSLog(@"%@",currentTip.linkTag);
     }
     
     if ([elementname isEqualToString:@"content"]){
