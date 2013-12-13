@@ -401,46 +401,35 @@
             </objects>
             <point key="canvasLocation" x="491" y="-1347"/>
         </scene>
-        <!--TableT Est View Controller-->
+        <!--Test Popular View Controller-->
         <scene sceneID="sUA-SR-0UO">
             <objects>
-                <viewController id="czf-LW-CUD" customClass="SBCTableTEstViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1rC-5P-FpW" customClass="SBCTable">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dB-AT-dab" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="czf-LW-CUD" customClass="SBCTestPopularViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2PG-Nk-QsH">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="bLW-A3-da8">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" id="ZyE-0l-2qw">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89Y-p8-ESJ">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="89Y-p8-ESJ" firstAttribute="top" secondItem="bLW-A3-da8" secondAttribute="top" constant="2" id="1dZ-Yo-ET9"/>
-                                    <constraint firstItem="89Y-p8-ESJ" firstAttribute="leading" secondItem="bLW-A3-da8" secondAttribute="leading" constant="134" id="cOY-11-btF"/>
-                                </constraints>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="czf-LW-CUD" id="FYb-jm-T5f"/>
+                            <outlet property="dataSource" destination="czf-LW-CUD" id="ktc-MS-2wY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="XOw-Du-u98">
-                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="7al-G9-RBw"/>
+                    <navigationItem key="navigationItem" id="YUF-m4-z2S">
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="cnK-oB-6je"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0dB-AT-dab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="491" y="-639"/>
         </scene>
@@ -492,8 +481,11 @@
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
-        <class className="SBCTableTEstViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SBCTableTEstViewController.h"/>
+        <class className="SBCTestPopularViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SBCTestPopularViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="sidebarButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
         </class>
         <class className="SWRevealView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SWRevealView.h"/>

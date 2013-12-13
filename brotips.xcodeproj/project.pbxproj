@@ -47,6 +47,7 @@
 		FDE961C61857448F009AB511 /* SBCPopularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE961C51857448F009AB511 /* SBCPopularViewController.m */; };
 		FDE961C91857463B009AB511 /* SBCMenuBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE961C81857463A009AB511 /* SBCMenuBarViewController.m */; };
 		FDE961D01857553F009AB511 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE961CF1857553E009AB511 /* MessageUI.framework */; };
+		FDFD2B0C185AEF8E00C7FA82 /* SBCTestPopularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFD2B0B185AEF8E00C7FA82 /* SBCTestPopularViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,8 @@
 		FDE961C71857463A009AB511 /* SBCMenuBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCMenuBarViewController.h; sourceTree = "<group>"; };
 		FDE961C81857463A009AB511 /* SBCMenuBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCMenuBarViewController.m; sourceTree = "<group>"; };
 		FDE961CF1857553E009AB511 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		FDFD2B0A185AEF8E00C7FA82 /* SBCTestPopularViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCTestPopularViewController.h; sourceTree = "<group>"; };
+		FDFD2B0B185AEF8E00C7FA82 /* SBCTestPopularViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCTestPopularViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 				FD88E47B185ACE3000356110 /* SBCPopularParser.h */,
 				FD88E47C185ACE3000356110 /* SBCPopularParser.m */,
 				FDC768001854B76900E11ED2 /* MainStoryboard.storyboard */,
+				FDFD2B0A185AEF8E00C7FA82 /* SBCTestPopularViewController.h */,
+				FDFD2B0B185AEF8E00C7FA82 /* SBCTestPopularViewController.m */,
 				FDE961C71857463A009AB511 /* SBCMenuBarViewController.h */,
 				FDE961C81857463A009AB511 /* SBCMenuBarViewController.m */,
 				FD88E47E185AD39C00356110 /* SBCSubmitViewController.h */,
@@ -326,6 +331,7 @@
 				FD88E47D185ACE3000356110 /* SBCPopularParser.m in Sources */,
 				FD88E480185AD39C00356110 /* SBCSubmitViewController.m in Sources */,
 				FD88E4B2185ADD6700356110 /* SBCTableTEstViewController.m in Sources */,
+				FDFD2B0C185AEF8E00C7FA82 /* SBCTestPopularViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
