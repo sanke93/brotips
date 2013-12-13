@@ -55,7 +55,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
