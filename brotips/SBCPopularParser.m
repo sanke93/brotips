@@ -1,17 +1,15 @@
 //
-//  SBCParser.m
+//  SBCPopularParser.m
 //  brotips
 //
-//  Created by Sanket Chauhan on 12/8/13.
+//  Created by Sanket Chauhan on 12/12/13.
 //  Copyright (c) 2013 Sanket Chauhan. All rights reserved.
 //
 
-#import "SBCParser.h"
+#import "SBCPopularParser.h"
+#import "SBCBrotip.h"
 
-
-
-@implementation SBCParser 
-
+@implementation SBCPopularParser
 
 NSMutableString	*currentNodeContent;
 NSXMLParser		*parser;
@@ -19,7 +17,7 @@ SBCBrotip		*currentTip;
 
 -(id) loadXMLByURL:(NSString *)urlString
 {
-	self.recentEntries			= [[NSMutableArray alloc] init];
+	self.popularEntries			= [[NSMutableArray alloc] init];
 	NSURL *url		= [NSURL URLWithString:urlString];
 	NSData	*data   = [[NSData alloc] initWithContentsOfURL:url];
     //NSString *aStr = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
@@ -42,17 +40,17 @@ SBCBrotip		*currentTip;
 	{
 		currentTip = [[SBCBrotip alloc] init];
 	}
-
+    
 }
 
 - (void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementname namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
-
-//    if ([elementname isEqualToString:@"link"])
-//    {
-//        currentTip.linkTag = currentNodeContent;
-//        NSLog(@"%@", currentNodeContent);
-//    }
+    
+    //    if ([elementname isEqualToString:@"link"])
+    //    {
+    //        currentTip.linkTag = currentNodeContent;
+    //        NSLog(@"%@", currentNodeContent);
+    //    }
     
     if ([elementname isEqualToString:@"title"])
     {
@@ -68,13 +66,14 @@ SBCBrotip		*currentTip;
     if ([elementname isEqualToString:@"content"]){
         currentTip.content = currentNodeContent;
     }
-
+    
 	if ([elementname isEqualToString:@"entry"])
 	{
-		[self.recentEntries addObject:currentTip];
+		[self.popularEntries addObject:currentTip];
 		currentTip = nil;
 		currentNodeContent = nil;
 	}
 }
+
 
 @end

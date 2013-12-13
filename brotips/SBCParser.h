@@ -11,7 +11,7 @@
 
 @interface SBCParser  : NSObject <NSXMLParserDelegate>
 
-@property (strong, nonatomic) NSMutableArray *entries;
+@property (strong, nonatomic) NSMutableArray *recentEntries;
 
 -(id) loadXMLByURL:(NSString *) urlString;
 

@@ -10,4 +10,7 @@
 
 @interface SBCPopularViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
+@property (nonatomic, retain) UIImageView *customImage;
 @end

@@ -61,7 +61,7 @@ UILabel *contentLabel;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[xmlParser entries] count];
+    return [[xmlParser recentEntries] count];
 }
 
 #pragma mark UITableViewDelegate
@@ -98,7 +98,7 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SBCBrotip *currentTip = [[xmlParser entries] objectAtIndex:indexPath.row];
+    SBCBrotip *currentTip = [[xmlParser recentEntries] objectAtIndex:indexPath.row];
     cellContent = [currentTip content];
     CGSize maximumLabelSize = CGSizeMake(236,9999);
     CGSize expectedLabelSize = [cellContent sizeWithFont:[UIFont systemFontOfSize:15]constrainedToSize:maximumLabelSize lineBreakMode:UILineBreakModeCharacterWrap];
@@ -115,7 +115,7 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     
     //SBCCell* customCells = [[SBCCell alloc] init];
     static NSString *CellIdentifier = @"customCell";
-    SBCBrotip *currentTip = [[xmlParser entries] objectAtIndex:indexPath.row];
+    SBCBrotip *currentTip = [[xmlParser recentEntries] objectAtIndex:indexPath.row];
     //NSString* cellContent1 = [currentTip content];
     SBCCell* customCells = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
@@ -248,7 +248,7 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        SBCBrotip *currentTip = [[xmlParser entries] objectAtIndex:indexPath.row];
+        SBCBrotip *currentTip = [[xmlParser recentEntries] objectAtIndex:indexPath.row];
         //NSDate *object = _objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:currentTip];
     }

@@ -13,6 +13,9 @@
 		FD6DF713185946A800139644 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DF712185946A800139644 /* twitter.png */; };
 		FD6DF715185946AE00139644 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DF714185946AE00139644 /* facebook.png */; };
 		FD6DF7171859472900139644 /* messagesios7.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DF7161859472900139644 /* messagesios7.png */; };
+		FD88E47D185ACE3000356110 /* SBCPopularParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FD88E47C185ACE3000356110 /* SBCPopularParser.m */; };
+		FD88E480185AD39C00356110 /* SBCSubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD88E47F185AD39C00356110 /* SBCSubmitViewController.m */; };
+		FD88E4B2185ADD6700356110 /* SBCTableTEstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD88E4B1185ADD6600356110 /* SBCTableTEstViewController.m */; };
 		FDC767E91854B76900E11ED2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767E81854B76900E11ED2 /* UIKit.framework */; };
 		FDC767EB1854B76900E11ED2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767EA1854B76900E11ED2 /* Foundation.framework */; };
 		FDC767ED1854B76900E11ED2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767EC1854B76900E11ED2 /* CoreGraphics.framework */; };
@@ -53,6 +56,12 @@
 		FD6DF712185946A800139644 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		FD6DF714185946AE00139644 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		FD6DF7161859472900139644 /* messagesios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messagesios7.png; sourceTree = "<group>"; };
+		FD88E47B185ACE3000356110 /* SBCPopularParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCPopularParser.h; sourceTree = "<group>"; };
+		FD88E47C185ACE3000356110 /* SBCPopularParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCPopularParser.m; sourceTree = "<group>"; };
+		FD88E47E185AD39C00356110 /* SBCSubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCSubmitViewController.h; sourceTree = "<group>"; };
+		FD88E47F185AD39C00356110 /* SBCSubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCSubmitViewController.m; sourceTree = "<group>"; };
+		FD88E4B0185ADD6600356110 /* SBCTableTEstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCTableTEstViewController.h; sourceTree = "<group>"; };
+		FD88E4B1185ADD6600356110 /* SBCTableTEstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCTableTEstViewController.m; sourceTree = "<group>"; };
 		FDC767E41854B76900E11ED2 /* brotips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brotips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC767E81854B76900E11ED2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FDC767EA1854B76900E11ED2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -152,15 +161,21 @@
 				FDE961BB18573B50009AB511 /* SWRevealViewController.m */,
 				FDE961C41857448F009AB511 /* SBCPopularViewController.h */,
 				FDE961C51857448F009AB511 /* SBCPopularViewController.m */,
+				FD88E4B0185ADD6600356110 /* SBCTableTEstViewController.h */,
+				FD88E4B1185ADD6600356110 /* SBCTableTEstViewController.m */,
 				FDC9F23C185705DC00F6E8BA /* SBCCell.h */,
 				FDC9F23D185705DC00F6E8BA /* SBCCell.m */,
 				FDC768111854B79400E11ED2 /* SBCBrotip.h */,
 				FDC768121854B79400E11ED2 /* SBCBrotip.m */,
 				FDC768131854B79400E11ED2 /* SBCParser.h */,
 				FDC768141854B79400E11ED2 /* SBCParser.m */,
+				FD88E47B185ACE3000356110 /* SBCPopularParser.h */,
+				FD88E47C185ACE3000356110 /* SBCPopularParser.m */,
 				FDC768001854B76900E11ED2 /* MainStoryboard.storyboard */,
 				FDE961C71857463A009AB511 /* SBCMenuBarViewController.h */,
 				FDE961C81857463A009AB511 /* SBCMenuBarViewController.m */,
+				FD88E47E185AD39C00356110 /* SBCSubmitViewController.h */,
+				FD88E47F185AD39C00356110 /* SBCSubmitViewController.m */,
 				FDC768031854B76900E11ED2 /* SBCMasterViewController.h */,
 				FDC768041854B76900E11ED2 /* SBCMasterViewController.m */,
 				FDC768061854B76900E11ED2 /* SBCDetailViewController.h */,
@@ -308,6 +323,9 @@
 				FDE961BC18573B50009AB511 /* SWRevealViewController.m in Sources */,
 				FDE961C61857448F009AB511 /* SBCPopularViewController.m in Sources */,
 				FDE961C91857463B009AB511 /* SBCMenuBarViewController.m in Sources */,
+				FD88E47D185ACE3000356110 /* SBCPopularParser.m in Sources */,
+				FD88E480185AD39C00356110 /* SBCSubmitViewController.m in Sources */,
+				FD88E4B2185ADD6700356110 /* SBCTableTEstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sanket Chauhan (2HC7UTJS63)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -396,6 +414,7 @@
 				INFOPLIST_FILE = "brotips/brotips-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -403,7 +422,7 @@
 		FDC7680D1854B76900E11ED2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sanket Chauhan (2HC7UTJS63)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -414,6 +433,7 @@
 				INFOPLIST_FILE = "brotips/brotips-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

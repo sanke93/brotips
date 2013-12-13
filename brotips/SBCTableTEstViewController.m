@@ -1,23 +1,20 @@
 //
-//  SBCMenuBarViewController.m
+//  SBCTableTEstViewController.m
 //  brotips
 //
-//  Created by Sanket Chauhan on 12/10/13.
+//  Created by Sanket Chauhan on 12/12/13.
 //  Copyright (c) 2013 Sanket Chauhan. All rights reserved.
 //
 
-#import "SBCMenuBarViewController.h"
-#import "SWRevealViewController.h"
-#import "SBCPopularViewController.h"
-#import "SBCSubmitViewController.h"
+#import "SBCTableTEstViewController.h"
 
-@interface SBCMenuBarViewController ()
+@interface SBCTableTEstViewController ()
 
-@property (nonatomic, strong) NSArray *menuItems;
+
 
 @end
 
-@implementation SBCMenuBarViewController
+@implementation SBCTableTEstViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -31,12 +28,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
-    self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
-    self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
-    
-    _menuItems = @[@"title",@"Recent", @"Popular", @"Submit"];
-
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -55,21 +46,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.menuItems count];
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellIdentifier = [self.menuItems objectAtIndex:indexPath.row];
+    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.textLabel.text = @"jh";
+    // Configure the cell...
     
     return cell;
 }
@@ -124,34 +118,6 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-}
-
-- (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
-{
-    // Set the title of navigation bar by using the menu items
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
-    destViewController.title = [[_menuItems objectAtIndex:indexPath.row] capitalizedString];
-    
-    // Set the photo if it navigates to the PhotoView
-//    if ([segue.identifier isEqualToString:@"showRecent"]) {
-//        PhotoViewController *photoController = (PhotoViewController*)segue.destinationViewController;
-//        NSString *photoFilename = [NSString stringWithFormat:@"%@_photo.jpg", [_menuItems objectAtIndex:indexPath.row]];
-//        photoController.photoFilename = photoFilename;
-//    }
-    
-    if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] ) {
-        SWRevealViewControllerSegue *swSegue = (SWRevealViewControllerSegue*) segue;
-        
-        swSegue.performBlock = ^(SWRevealViewControllerSegue* rvc_segue, UIViewController* svc, UIViewController* dvc) {
-            
-            UINavigationController* navController = (UINavigationController*)self.revealViewController.frontViewController;
-            [navController setViewControllers: @[dvc] animated: NO ];
-            [self.revealViewController setFrontViewPosition: FrontViewPositionLeft animated: YES];
-        };
-        
-    }
-    
 }
 
 @end
