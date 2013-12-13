@@ -151,11 +151,9 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
 {
     static NSString *CellIdentifier = @"customCell";
     SBCBrotip *currentTip = [[xmlParser popularEntries] objectAtIndex:indexPath.row];
-    //NSString* cellContent1 = [currentTip content];
     SBCCell* customCells = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     customCells.tipNum1.text = [currentTip tipNumber];
     customCells.tipContent.text = [currentTip content];
-    CGSize maximumLabelSize = CGSizeMake(236,9999);
     customCells.tipImage.image = [UIImage imageNamed:@"brotip.png"];
     return customCells;
 

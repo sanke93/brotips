@@ -22,7 +22,7 @@ SBCBrotip		*currentTip;
 	NSData	*data   = [[NSData alloc] initWithContentsOfURL:url];
     //NSString *aStr = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
     //NSLog(@"aStr:%@",aStr);
-	parser			= [[NSXMLParser alloc] initWithData:data];
+	parser	= [[NSXMLParser alloc] initWithData:data];
 	parser.delegate = self;
 	[parser parse];
 	return self;
