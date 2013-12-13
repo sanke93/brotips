@@ -36,7 +36,7 @@ NSString *linkURL;
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
+
     SBCBrotip *currentTip = self.detailItem;
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [currentTip content];
@@ -92,6 +92,8 @@ NSString *linkURL;
     }
     return params;
 }
+
+//taken from the facebook site
 
 - (IBAction)fbShare:(id)sender {
     
@@ -175,6 +177,8 @@ NSString *linkURL;
     }
 }
 
+//twitter sharing code inspired by http://tutorials.veasoftware.com/2013/07/19/how-to-use-ios-facebook-and-twitter-integration/
+
 - (IBAction)tweetShare:(id)sender {
 
     
@@ -201,6 +205,7 @@ NSString *linkURL;
     
 }
 
+//texting code
 -(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result{
     NSString *output = nil;
     

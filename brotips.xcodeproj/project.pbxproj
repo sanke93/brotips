@@ -19,7 +19,6 @@
 		FD8840AA185B09A2000BECFA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD8840A9185B09A2000BECFA /* Icon@2x.png */; };
 		FD88E47D185ACE3000356110 /* SBCPopularParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FD88E47C185ACE3000356110 /* SBCPopularParser.m */; };
 		FD88E480185AD39C00356110 /* SBCSubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD88E47F185AD39C00356110 /* SBCSubmitViewController.m */; };
-		FD88E4B2185ADD6700356110 /* SBCTableTEstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD88E4B1185ADD6600356110 /* SBCTableTEstViewController.m */; };
 		FDC767E91854B76900E11ED2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767E81854B76900E11ED2 /* UIKit.framework */; };
 		FDC767EB1854B76900E11ED2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767EA1854B76900E11ED2 /* Foundation.framework */; };
 		FDC767ED1854B76900E11ED2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC767EC1854B76900E11ED2 /* CoreGraphics.framework */; };
@@ -48,7 +47,6 @@
 		FDE961BC18573B50009AB511 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE961BB18573B50009AB511 /* SWRevealViewController.m */; };
 		FDE961BF18573D11009AB511 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FDE961BD18573D11009AB511 /* menu.png */; };
 		FDE961C018573D11009AB511 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDE961BE18573D11009AB511 /* menu@2x.png */; };
-		FDE961C61857448F009AB511 /* SBCPopularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE961C51857448F009AB511 /* SBCPopularViewController.m */; };
 		FDE961C91857463B009AB511 /* SBCMenuBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE961C81857463A009AB511 /* SBCMenuBarViewController.m */; };
 		FDE961D01857553F009AB511 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE961CF1857553E009AB511 /* MessageUI.framework */; };
 		FDFD2B0C185AEF8E00C7FA82 /* SBCTestPopularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFD2B0B185AEF8E00C7FA82 /* SBCTestPopularViewController.m */; };
@@ -63,14 +61,12 @@
 		FD6DF7161859472900139644 /* messagesios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messagesios7.png; sourceTree = "<group>"; };
 		FD8840A3185B0980000BECFA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		FD8840A4185B0980000BECFA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		FD8840A7185B099C000BECFA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		FD8840A9185B09A2000BECFA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		FD8840A7185B099C000BECFA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		FD8840A9185B09A2000BECFA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		FD88E47B185ACE3000356110 /* SBCPopularParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCPopularParser.h; sourceTree = "<group>"; };
 		FD88E47C185ACE3000356110 /* SBCPopularParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCPopularParser.m; sourceTree = "<group>"; };
 		FD88E47E185AD39C00356110 /* SBCSubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCSubmitViewController.h; sourceTree = "<group>"; };
 		FD88E47F185AD39C00356110 /* SBCSubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCSubmitViewController.m; sourceTree = "<group>"; };
-		FD88E4B0185ADD6600356110 /* SBCTableTEstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCTableTEstViewController.h; sourceTree = "<group>"; };
-		FD88E4B1185ADD6600356110 /* SBCTableTEstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCTableTEstViewController.m; sourceTree = "<group>"; };
 		FDC767E41854B76900E11ED2 /* brotips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brotips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC767E81854B76900E11ED2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FDC767EA1854B76900E11ED2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,8 +105,6 @@
 		FDE961BB18573B50009AB511 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../SWRevealViewController.m; sourceTree = "<group>"; };
 		FDE961BD18573D11009AB511 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		FDE961BE18573D11009AB511 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
-		FDE961C41857448F009AB511 /* SBCPopularViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBCPopularViewController.h; path = ../SBCPopularViewController.h; sourceTree = "<group>"; };
-		FDE961C51857448F009AB511 /* SBCPopularViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBCPopularViewController.m; path = ../SBCPopularViewController.m; sourceTree = "<group>"; };
 		FDE961C71857463A009AB511 /* SBCMenuBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCMenuBarViewController.h; sourceTree = "<group>"; };
 		FDE961C81857463A009AB511 /* SBCMenuBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCMenuBarViewController.m; sourceTree = "<group>"; };
 		FDE961CF1857553E009AB511 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -135,11 +129,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD8840AB185B0C06000BECFA /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				FDE961BA18573B50009AB511 /* SWRevealViewController.h */,
+				FDE961BB18573B50009AB511 /* SWRevealViewController.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		FDC767D91854B76900E11ED2 = {
 			isa = PBXGroup;
 			children = (
-				FD8840A9185B09A2000BECFA /* Icon@2x.png */,
-				FD8840A7185B099C000BECFA /* Icon.png */,
 				FDC767EE1854B76900E11ED2 /* brotips */,
 				FDC767E71854B76900E11ED2 /* Frameworks */,
 				FDC767E51854B76900E11ED2 /* Products */,
@@ -170,12 +171,6 @@
 		FDC767EE1854B76900E11ED2 /* brotips */ = {
 			isa = PBXGroup;
 			children = (
-				FDE961BA18573B50009AB511 /* SWRevealViewController.h */,
-				FDE961BB18573B50009AB511 /* SWRevealViewController.m */,
-				FDE961C41857448F009AB511 /* SBCPopularViewController.h */,
-				FDE961C51857448F009AB511 /* SBCPopularViewController.m */,
-				FD88E4B0185ADD6600356110 /* SBCTableTEstViewController.h */,
-				FD88E4B1185ADD6600356110 /* SBCTableTEstViewController.m */,
 				FDC9F23C185705DC00F6E8BA /* SBCCell.h */,
 				FDC9F23D185705DC00F6E8BA /* SBCCell.m */,
 				FDC768111854B79400E11ED2 /* SBCBrotip.h */,
@@ -195,6 +190,7 @@
 				FDC768041854B76900E11ED2 /* SBCMasterViewController.m */,
 				FDC768061854B76900E11ED2 /* SBCDetailViewController.h */,
 				FDC768071854B76900E11ED2 /* SBCDetailViewController.m */,
+				FD8840AB185B0C06000BECFA /* Library */,
 				FDC9F23B1857052500F6E8BA /* Resources */,
 				FDC767EF1854B76900E11ED2 /* Supporting Files */,
 			);
@@ -218,6 +214,8 @@
 		FDC9F23B1857052500F6E8BA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FD8840A9185B09A2000BECFA /* Icon@2x.png */,
+				FD8840A7185B099C000BECFA /* Icon.png */,
 				FD8840A3185B0980000BECFA /* Icon.png */,
 				FD8840A4185B0980000BECFA /* Icon@2x.png */,
 				FD6DF7161859472900139644 /* messagesios7.png */,
@@ -342,11 +340,9 @@
 				FDC9F23E185705DC00F6E8BA /* SBCCell.m in Sources */,
 				FDE961B918573AEB009AB511 /* SBCDetailViewController.m in Sources */,
 				FDE961BC18573B50009AB511 /* SWRevealViewController.m in Sources */,
-				FDE961C61857448F009AB511 /* SBCPopularViewController.m in Sources */,
 				FDE961C91857463B009AB511 /* SBCMenuBarViewController.m in Sources */,
 				FD88E47D185ACE3000356110 /* SBCPopularParser.m in Sources */,
 				FD88E480185AD39C00356110 /* SBCSubmitViewController.m in Sources */,
-				FD88E4B2185ADD6700356110 /* SBCTableTEstViewController.m in Sources */,
 				FDFD2B0C185AEF8E00C7FA82 /* SBCTestPopularViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

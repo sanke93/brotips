@@ -8,7 +8,6 @@
 
 #import "SBCMenuBarViewController.h"
 #import "SWRevealViewController.h"
-#import "SBCPopularViewController.h"
 #import "SBCSubmitViewController.h"
 
 @interface SBCMenuBarViewController ()

@@ -64,16 +64,12 @@ UILabel *contentLabel;
     return [[xmlParser recentEntries] count];
 }
 
+//alternate background
 #pragma mark UITableViewDelegate
 - (void)tableView: (UITableView*)tableView
   willDisplayCell: (UITableViewCell*)cell
 forRowAtIndexPath: (NSIndexPath*)indexPath
 {
-    //cell.backgroundColor = indexPath.row % 2
-    //? [UIColor colorWithRed: 0.0 green: 0.0 blue: 0.8 alpha: 0.3]
-    //: [UIColor whiteColor];
-    //cell.textLabel.backgroundColor = [UIColor clearColor];
-    //cell.detailTextLabel.backgroundColor = [UIColor clearColor];
     if (indexPath.row % 2)
         cell.backgroundColor = [UIColor colorWithRed:0.0 green:0.4 blue:0.5 alpha:0.2];
     
@@ -115,89 +111,16 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     //SBCCell* customCells = [[SBCCell alloc] init];
     static NSString *CellIdentifier = @"customCell";
     SBCBrotip *currentTip = [[xmlParser recentEntries] objectAtIndex:indexPath.row];
-    //NSString* cellContent1 = [currentTip content];
     SBCCell* customCells = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
-   // if (customCells == nil){
-        //customCells = [[SBCCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    customCells.tipNum1.text = [currentTip tipNumber];
+    customCells.tipContent.text = [currentTip content];
     
-        //UIImageView *tipImageView = (UIImageView *)[cell viewWithTag:100];
-        //tipImageView.image = [UIImage imageNamed:@"brotip.png"];
-        //self.tipLogo = [UIImage imageNamed:@"brotip.png"];
-        //customCells.tipContent.
-        customCells.tipNum1.text = [currentTip tipNumber];
-        customCells.tipContent.text = [currentTip content];
-    CGSize maximumLabelSize = CGSizeMake(236,9999);
-        customCells.tipImage.image = [UIImage imageNamed:@"brotip.png"];
-    CGSize expectedLabelSize = [customCells.tipContent.text sizeWithFont:[UIFont systemFontOfSize:15]
-                          constrainedToSize:maximumLabelSize lineBreakMode:UILineBreakModeCharacterWrap];
-    CGRect contentFrame = CGRectMake(7, 20, 265, expectedLabelSize.height);
-    UILabel *contentLabel = [[UILabel alloc] initWithFrame:contentFrame];
-    contentLabel.numberOfLines = 5;
-    contentLabel.font = [UIFont boldSystemFontOfSize:14];
-    contentLabel.backgroundColor = [UIColor clearColor];
-    
-    //UILabel *contentLabel = (UILabel *)[cell.contentView viewWithTag:0011];
-    contentLabel.text = [currentTip content];
-    //[customCells.contentView addSubview:contentLabel];
-    
-    //NSLog(@"%f",expectedLabelSize.height);
-    
-    //customCells.backgroundColor = indexPath.row % 2 ? [UIColor colorWithRed: 0.0 green: 0.0 blue: 1.0 alpha: 1.0]: [UIColor whiteColor];
-    //customCells.backgroundColor = [UIColor redColor];
-    
-    //[customCells setBackgroundColor:[UIColor colorWithRed:.8 green:.8 blue:1 alpha:1]];
-    
-      //UILabel *tipNumber = (UILabel *)[cell viewWithTag:101];
-        //tipNumber.text = [currentTip tipNumber];
-    
-        //UILabel *tipText = (UILabel *)[cell viewWithTag:102];
-        //tipText.text = [currentTip content];
-    //}
-//    
-//
-//    
+    customCells.tipImage.image = [UIImage imageNamed:@"brotip.png"];
+
     return customCells;
     
-//    static NSString *CellIdentifier = @"Cell";
-//	SBCBrotip *currentTip = [[xmlParser entries] objectAtIndex:indexPath.row];
-//    
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    if (cell == nil)
-//    {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-//        
-//        UIImage	 *brotipLogo = [UIImage imageNamed:@"brotip.png"];
-//        
-//        CGRect imageFrame = CGRectMake(2, 1, 62, 20);
-//        self.customImage = [[UIImageView alloc] initWithFrame:imageFrame];
-//        self.customImage.image = brotipLogo;
-//        [cell.contentView addSubview:self.customImage];
-//        
-//        //CGRect contentFrame = CGRectMake(45, 2, 265, 30);
-//        //float x,float y, width, heigh
-//        CGRect contentFrame = CGRectMake(5, 20, 310,50);
-//        UILabel *contentLabel = [[UILabel alloc] initWithFrame:contentFrame];
-//        contentLabel.tag = 0011;
-//        contentLabel.numberOfLines = 5;
-//        contentLabel.font = [UIFont boldSystemFontOfSize:14];
-//        [cell.contentView addSubview:contentLabel];
-//        
-//        CGRect tipNumberFrame = CGRectMake(65, 1, 265, 20);
-//        UILabel *tipNumberLabel = [[UILabel alloc] initWithFrame:tipNumberFrame];
-//        tipNumberLabel.tag = 0012;
-//        tipNumberLabel.font = [UIFont systemFontOfSize:22];
-//        [cell.contentView addSubview:tipNumberLabel];
-//    }
-//	
-//	UILabel *contentLabel = (UILabel *)[cell.contentView viewWithTag:0011];
-//    contentLabel.text = [currentTip content];
-//	
-//	UILabel *dateLabel = (UILabel *)[cell.contentView viewWithTag:0012];
-//    dateLabel.text = [currentTip tipNumber];
-//	
-//    return cell;
-//
+
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -278,24 +201,11 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     [settingsView addSubview:menuButton];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:settingsView];
-    //self.navigationItem.leftBarButtonItem.target = self.revealViewController;
-   // self.navigationItem.leftBarButtonItem.action = @selector(revealToggle:);
-    
-//    _sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.1f];
-//    
-//    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
-//    _sidebarButton.target = self.revealViewController;
-//    _sidebarButton.action = @selector(revealToggle:);
-    // Set the gesture
+
     
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 
-    //[self.navigationController.navigationBar setBackgroundColor:[UIColor brownColor]];
-    //[self.navigationController.navigationBar setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"navbar_bg.png"]]];
-//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-//    
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
+
 }
 
 

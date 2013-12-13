@@ -48,11 +48,6 @@ SBCBrotip		*currentTip;
 - (void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementname namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
 
-//    if ([elementname isEqualToString:@"link"])
-//    {
-//        currentTip.linkTag = currentNodeContent;
-//        NSLog(@"%@", currentNodeContent);
-//    }
     
     if ([elementname isEqualToString:@"title"])
     {
